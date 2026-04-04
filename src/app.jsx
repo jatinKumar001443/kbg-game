@@ -750,24 +750,25 @@ var CSS = [
 ".game-layout{flex:1;display:flex;max-width:1200px;width:100%;margin:0 auto;padding:clamp(5px,1.5vw,10px);overflow:hidden;min-height:0}",
 ".game-center{flex:1;display:flex;flex-direction:column;gap:clamp(5px,1.5vw,8px);min-width:0;padding-right:clamp(0px,1vw,10px);overflow-y:auto;scrollbar-width:none}",
 ".game-center::-webkit-scrollbar{display:none}",
-".prize-panel{width:clamp(130px,15vw,175px);flex-shrink:0;display:flex;flex-direction:column}",
+".prize-panel{width:clamp(170px,13vw,220px);flex-shrink:0;display:flex;flex-direction:column;align-self:stretch}",
 "@media(max-width:750px){.prize-panel{display:none}}",
-".prize-box{background:linear-gradient(180deg,rgba(15,0,35,0.98),rgba(25,0,60,0.92));border:1px solid rgba(123,47,255,0.3);border-radius:12px;overflow:hidden;flex:1}",
-".prize-header{font-family:'Bebas Neue',sans-serif;font-size:0.7rem;color:var(--gold);letter-spacing:2px;text-align:center;padding:6px 8px 4px;border-bottom:1px solid rgba(123,47,255,0.2);text-transform:uppercase;font-weight:700}",
-".prize-list{display:flex;flex-direction:column-reverse;overflow-y:auto;height:calc(100% - 30px);scrollbar-width:none}",
+".prize-box{background:linear-gradient(180deg,#1a0040 0%,#0d0028 100%);border:none;border-left:3px solid rgba(255,215,0,0.3);overflow:hidden;flex:1;display:flex;flex-direction:column}",
+".prize-header{font-family:'Bebas Neue',sans-serif;font-size:clamp(1rem,1.3vw,1.2rem);color:var(--gold);letter-spacing:4px;text-align:center;padding:10px 6px 8px;border-bottom:2px solid rgba(255,215,0,0.4);text-transform:uppercase;background:linear-gradient(180deg,rgba(255,215,0,0.1),transparent);text-shadow:0 0 12px rgba(255,215,0,0.7);flex-shrink:0}",
+".prize-list{display:flex;flex-direction:column-reverse;flex:1;overflow:hidden;padding:0}",
 ".prize-list::-webkit-scrollbar{display:none}",
-".prow{display:flex;align-items:center;padding:3px 8px;gap:4px;transition:all 0.3s;border-left:3px solid transparent}",
-".prow.active{background:linear-gradient(90deg,rgba(255,215,0,0.18),rgba(255,165,0,0.06));border-left-color:var(--gold)}",
-".prow.passed{opacity:0.3;border-left-color:rgba(0,255,136,0.25)}",
-".prow.upcoming{opacity:0.44}",
-".prow.safe-r{border-right:2px solid rgba(0,255,136,0.35)}",
-".prow-q{font-family:'Exo 2',sans-serif;font-size:0.54rem;color:var(--dim);width:14px;flex-shrink:0;font-weight:600}",
-".prow.active .prow-q{color:rgba(200,180,255,0.8)}",
-".prow-p{font-family:'Bebas Neue',sans-serif;font-size:0.68rem;font-weight:500;flex:1;text-align:right;letter-spacing:0.5px}",
-".prow.active .prow-p{color:var(--gold);font-size:0.78rem;font-weight:400;text-shadow:0 0 8px rgba(255,215,0,0.6);animation:activePrize 1s ease-in-out infinite alternate}",
-"@keyframes activePrize{0%{text-shadow:0 0 4px rgba(255,215,0,0.4)}100%{text-shadow:0 0 14px rgba(255,215,0,0.9)}}",
-".prow.passed .prow-p{color:rgba(0,255,136,0.6)}",
-".prow.upcoming .prow-p{color:var(--dim)}",
+".prow{display:flex;align-items:center;padding:0 10px;gap:0;transition:all 0.25s;flex:1;min-height:0;border-left:4px solid transparent}",
+".prow.active{background:linear-gradient(90deg,rgba(255,200,0,0.35),rgba(255,165,0,0.15),rgba(255,200,0,0.08));border-left:6px solid var(--gold)}",
+".prow.passed{background:rgba(0,180,80,0.04)}",
+".prow.upcoming{}",
+".prow.safe-r{border-bottom:1.5px solid rgba(255,215,0,0.35)}",
+".prow-q{font-family:'Bebas Neue',sans-serif;font-size:clamp(0.85rem,1.15vw,1.1rem);color:rgba(200,180,255,0.7);width:28px;flex-shrink:0;font-weight:400;text-align:left;line-height:1}",
+".prow.active .prow-q{color:#fff;font-size:clamp(1rem,1.4vw,1.25rem)}",
+".prow.passed .prow-q{color:rgba(0,255,136,0.7)}",
+".prow-p{font-family:'Bebas Neue',sans-serif;font-size:clamp(0.82rem,1.1vw,1.05rem);font-weight:400;flex:1;text-align:right;letter-spacing:0.5px;color:rgba(220,200,255,0.75);line-height:1}",
+".prow.active .prow-p{color:var(--gold);font-size:clamp(0.95rem,1.3vw,1.2rem);font-weight:400;text-shadow:0 0 10px rgba(255,215,0,0.8);animation:activePrize 1.2s ease-in-out infinite alternate}",
+"@keyframes activePrize{0%{text-shadow:0 0 6px rgba(255,215,0,0.5)}100%{text-shadow:0 0 18px rgba(255,215,0,1)}}",
+".prow.passed .prow-p{color:rgba(0,255,136,0.65)}",
+".prow.upcoming .prow-p{color:rgba(200,180,255,0.55)}",
 ".prize-strip{display:none;overflow-x:auto;padding:5px 3px;background:linear-gradient(90deg,rgba(10,0,25,0.95),rgba(20,0,50,0.85));border:1px solid rgba(123,47,255,0.2);border-radius:8px;scrollbar-width:none;flex-shrink:0}",
 ".prize-strip::-webkit-scrollbar{display:none}",
 "@media(max-width:750px){.prize-strip{display:flex}}",
@@ -1343,11 +1344,31 @@ export default function KaunBanegaGenius() {
         React.createElement("div", { className: "prize-list" },
           PRIZE_LADDER.slice().reverse().map(function(row, ri) {
             var i = 16 - ri;
-            var cls = "prow" + (i === currentQ ? " active" : i < currentQ ? " passed" : " upcoming") + (row.safe ? " safe-r" : "");
+            var isActive = i === currentQ;
+            var isPassed = i < currentQ;
+            var cls = "prow"
+              + (isActive ? " active" : isPassed ? " passed" : " upcoming")
+              + (row.safe ? " safe-r" : "");
+            // Format prize: show "7 Crore" for 7,00,00,000; "1 Crore" for 1,00,00,000
+            var prizeDisplay = row.prize === "7,00,00,000" ? "7 Crores"
+              : row.prize === "1,00,00,000" ? "1 Crore"
+              : row.prize;
             return React.createElement("div", { key: i, className: cls },
               React.createElement("span", { className: "prow-q" }, row.q),
-              React.createElement("span", { className: "prow-p" }, "Rs." + row.prize),
-              row.safe ? React.createElement("span", { style: { fontSize: "0.44rem", color: "rgba(0,255,136,0.7)" } }, "S") : null
+              !isActive && React.createElement("span", {
+                style: {
+                  color: row.safe ? "rgba(255,215,0,0.6)" : "rgba(160,130,255,0.45)",
+                  fontSize: "0.5rem",
+                  flexShrink: 0,
+                  width: "12px",
+                  textAlign: "center",
+                  lineHeight: 1
+                }
+              }, row.safe ? "◆" : "◇"),
+              isActive && React.createElement("span", {
+                style: { width: "12px", flexShrink: 0 }
+              }),
+              React.createElement("span", { className: "prow-p" }, prizeDisplay)
             );
           })
         )
