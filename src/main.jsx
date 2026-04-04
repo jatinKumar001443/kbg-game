@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import KaunBanegaGenius from "./KBC_Game.jsx"
+import KaunBanegaGenius from "./app.jsx"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   React.createElement(KaunBanegaGenius)
