@@ -72,103 +72,77 @@ const GAME_RULES = [
 // ============================================================
 
 var EASY_QS = [
-  {question:"Who is known as the Father of the Nation of India?",options:["Jawaharlal Nehru","Sardar Patel","Mahatma Gandhi","B.R. Ambedkar"],correct:2,topic:"Indian History",explanation:"Mahatma Gandhi is called the Father of the Nation for leading India's independence movement through non-violence."},
-  {question:"Which is the largest planet in our Solar System?",options:["Saturn","Neptune","Uranus","Jupiter"],correct:3,topic:"Space",explanation:"Jupiter is the largest planet, with a mass greater than all other planets combined."},
-  {question:"What does HTML stand for?",options:["Hyper Text Markup Language","High Tech Modern Language","Hyper Transfer Meta Language","Home Tool Markup Language"],correct:0,topic:"Computer Science",explanation:"HTML stands for Hyper Text Markup Language, the standard language for creating web pages."},
-  {question:"Which organ pumps blood throughout the human body?",options:["Liver","Lungs","Kidney","Heart"],correct:3,topic:"Human Body",explanation:"The heart is the muscular organ that pumps blood through the circulatory system."},
-  {question:"What is 15% of 200?",options:["20","25","30","35"],correct:2,topic:"Mathematics",explanation:"15% of 200 = (15/100) x 200 = 30."},
-  {question:"Which country won the FIFA World Cup 2022?",options:["Brazil","France","Argentina","Germany"],correct:2,topic:"Football",explanation:"Argentina won the FIFA World Cup 2022 in Qatar, defeating France in the final."},
-  {question:"What is the full form of WHO?",options:["World Health Organization","World Humanitarian Organization","World Heritage Organization","World Housing Organization"],correct:0,topic:"World Organizations",explanation:"WHO stands for World Health Organization, a specialized agency of the United Nations."},
-  {question:"In which year was the first iPhone released?",options:["2005","2006","2007","2008"],correct:2,topic:"Technology",explanation:"Apple released the first iPhone on June 29, 2007."},
-  {question:"Who wrote the play Romeo and Juliet?",options:["Charles Dickens","William Shakespeare","Jane Austen","Mark Twain"],correct:1,topic:"Literature",explanation:"Romeo and Juliet was written by William Shakespeare around 1594-1596."},
-  {question:"What is the chemical formula of common salt?",options:["KCl","NaCl","MgCl2","CaCl2"],correct:1,topic:"Chemistry",explanation:"Common salt is sodium chloride with the chemical formula NaCl."},
-  {question:"How many events are there in a Decathlon?",options:["8","9","10","12"],correct:2,topic:"Olympics",explanation:"A decathlon consists of 10 track and field events spread over two days."},
-  {question:"Which Indian city is known as the Silicon Valley of India?",options:["Mumbai","Hyderabad","Chennai","Bengaluru"],correct:3,topic:"India",explanation:"Bengaluru (Bangalore) is called the Silicon Valley of India due to its IT industry dominance."},
-  {question:"What is the value of Pi (to 2 decimal places)?",options:["3.12","3.14","3.16","3.18"],correct:1,topic:"Mathematics",explanation:"Pi is approximately 3.14159... commonly rounded to 3.14."},
-  {question:"Which is the largest ocean on Earth?",options:["Atlantic Ocean","Indian Ocean","Arctic Ocean","Pacific Ocean"],correct:3,topic:"Geography",explanation:"The Pacific Ocean is the largest and deepest ocean covering about 30% of Earth's surface."},
-  {question:"Who was the first woman Prime Minister of India?",options:["Pratibha Patil","Sonia Gandhi","Indira Gandhi","Sarojini Naidu"],correct:2,topic:"Indian History",explanation:"Indira Gandhi served as India's first and only female Prime Minister from 1966 to 1984."},
-  {question:"What does RAM stand for in computers?",options:["Read Access Memory","Random Access Memory","Rapid Action Memory","Read All Memory"],correct:1,topic:"Computer Science",explanation:"RAM stands for Random Access Memory, the temporary storage used by computers."},
-  {question:"Which gas is most abundant in Earth's atmosphere?",options:["Oxygen","Carbon Dioxide","Argon","Nitrogen"],correct:3,topic:"Science",explanation:"Nitrogen makes up about 78% of Earth's atmosphere."},
-  {question:"How many gold medals did India win in the 2020 Tokyo Olympics?",options:["0","1","2","3"],correct:1,topic:"Olympics",explanation:"India won 1 gold medal at the Tokyo 2020 Olympics, won by Neeraj Chopra in javelin throw."},
-  {question:"What is the largest desert in the world?",options:["Sahara Desert","Gobi Desert","Arabian Desert","Antarctic Desert"],correct:3,topic:"Geography",explanation:"The Antarctic Desert is the world's largest desert at about 14.2 million sq km."},
-  {question:"Who is the author of the Harry Potter series?",options:["Stephenie Meyer","J.R.R. Tolkien","J.K. Rowling","C.S. Lewis"],correct:2,topic:"Literature",explanation:"J.K. Rowling wrote the Harry Potter series, one of the best-selling book series of all time."},
-  {question:"What is the basic unit of life?",options:["Atom","Cell","Molecule","Tissue"],correct:1,topic:"Biology",explanation:"The cell is the basic structural and functional unit of all living organisms."},
-  {question:"Which Article of the Indian Constitution gives the Right to Equality?",options:["Article 12","Article 14","Article 19","Article 21"],correct:1,topic:"Constitution of India",explanation:"Article 14 guarantees equality before law and equal protection of laws to all persons in India."},
-  {question:"What is the capital of Australia?",options:["Sydney","Melbourne","Brisbane","Canberra"],correct:3,topic:"World GK",explanation:"Canberra is the capital of Australia, not Sydney which is the largest city."},
-  {question:"In cricket, how many runs is a No Ball penalized as?",options:["0","1","2","5"],correct:1,topic:"Cricket",explanation:"A no ball results in 1 extra run being added to the batting team's score."},
-  {question:"What is the speed of light approximately?",options:["2 lakh km/s","3 lakh km/s","4 lakh km/s","5 lakh km/s"],correct:1,topic:"Physics",explanation:"The speed of light in vacuum is approximately 3 x 10^8 m/s or 3 lakh km per second."},
-  {question:"Which sport is played at Wimbledon?",options:["Cricket","Badminton","Tennis","Squash"],correct:2,topic:"Sports",explanation:"Wimbledon is the oldest Grand Slam tennis tournament held in London, England."},
-  {question:"What does GDP stand for?",options:["Gross Domestic Product","General Domestic Production","Global Development Product","Gross Demand Percentage"],correct:0,topic:"Economics",explanation:"GDP stands for Gross Domestic Product, the total monetary value of goods and services produced in a country."},
-  {question:"Which vitamin is known as the sunshine vitamin?",options:["Vitamin A","Vitamin B12","Vitamin C","Vitamin D"],correct:3,topic:"Human Body",explanation:"Vitamin D is called the sunshine vitamin because the skin synthesizes it when exposed to sunlight."},
-  {question:"Who invented the telephone?",options:["Thomas Edison","Nikola Tesla","Alexander Graham Bell","Guglielmo Marconi"],correct:2,topic:"Science",explanation:"Alexander Graham Bell is credited with patenting the first practical telephone in 1876."},
-  {question:"What is the currency of the United Kingdom?",options:["Euro","Dollar","Pound Sterling","Franc"],correct:2,topic:"World GK",explanation:"The Pound Sterling (GBP) is the official currency of the United Kingdom."},
+  {question:"Which Amendment to the Indian Constitution added 'Socialist' and 'Secular' to the Preamble?",options:["46th Amendment","44th Amendment","52nd Amendment","42nd Amendment"],correct:3,topic:"Constitution",explanation:"The 42nd Constitutional Amendment (1976) added 'Socialist', 'Secular' and 'Integrity' to the Preamble of the Indian Constitution."},
+  {question:"What is the exact percentage of nitrogen in Earth's atmosphere?",options:["84.01%","78.09%","68.03%","72.09%"],correct:1,topic:"Science",explanation:"Nitrogen constitutes 78.09% of Earth's atmosphere, making it the most abundant gas, followed by oxygen at 20.95%."},
+  {question:"Under which Article of the Indian Constitution can the President declare a National Emergency?",options:["Article 368","Article 352","Article 360","Article 356"],correct:1,topic:"Constitution",explanation:"Article 352 empowers the President to declare National Emergency when the security of India is threatened by war, external aggression or armed rebellion."},
+  {question:"What is the half-life of Carbon-14 used in radiocarbon dating?",options:["9,460 years","3,730 years","12,500 years","5,730 years"],correct:3,topic:"Chemistry",explanation:"Carbon-14 has a half-life of approximately 5,730 years, which makes it useful for dating organic materials up to about 50,000 years old."},
+  {question:"Which enzyme is deficient in patients with Phenylketonuria (PKU)?",options:["Fumarylacetoacetase","Homogentisate oxidase","Tyrosinase","Phenylalanine hydroxylase"],correct:3,topic:"Biology",explanation:"PKU is caused by deficiency of phenylalanine hydroxylase, which converts phenylalanine to tyrosine. This leads to toxic buildup of phenylalanine in the blood."},
+  {question:"In which year was the Treaty of Westphalia signed, establishing the modern concept of state sovereignty?",options:["1618","1648","1658","1688"],correct:1,topic:"History",explanation:"The Peace of Westphalia (1648) ended the Thirty Years War and established the principle of state sovereignty and non-interference in other nations' internal affairs."},
+  {question:"What is the bond angle in a methane (CH4) molecule?",options:["90 degrees","109.5 degrees","104.5 degrees","120 degrees"],correct:1,topic:"Chemistry",explanation:"Methane has a tetrahedral geometry with a bond angle of 109.5 degrees due to four equal sp3 hybridized C-H bonds with no lone pairs."},
+  {question:"Who propounded the 'Basic Structure Doctrine' in Indian Constitutional Law?",options:["Hidayatullah J","Sikri CJ","H.R. Khanna J","Subba Rao J"],correct:1,topic:"Law",explanation:"Chief Justice S.M. Sikri propounded the Basic Structure Doctrine in Kesavananda Bharati v State of Kerala (1973), limiting Parliament's power to amend the Constitution."},
+  {question:"What is the Laffer Curve in economics?",options:["Relationship between tax rates and tax revenue showing an optimal tax rate","Curve showing trade-off between unemployment and inflation","Relationship between money supply and inflation","Curve showing diminishing returns to capital"],correct:0,topic:"Economics",explanation:"The Laffer Curve illustrates that there is an optimal tax rate that maximizes tax revenue - both 0% and 100% tax rates yield zero revenue, with a peak in between."},
+  {question:"What is the work function of caesium metal, making it useful in photoelectric cells?",options:["4.7 eV","3.1 eV","6.4 eV","2.0 eV"],correct:3,topic:"Physics",explanation:"Caesium has a work function of approximately 2.0 eV, one of the lowest of all metals, making it ideal for photoelectric cells as visible light can eject electrons from it."},
+  {question:"Which case established the principle of 'Rarest of Rare' doctrine for capital punishment in India?",options:["Bachan Singh v State of Punjab","State of UP v Ram Sagar Yadav","Maneka Gandhi v Union of India","Machhi Singh v State of Punjab"],correct:0,topic:"Law",explanation:"Bachan Singh v State of Punjab (1980) established the 'rarest of rare' doctrine - death penalty should only be given in the most exceptional circumstances where life imprisonment is insufficient."},
+  {question:"What is the Chandrasekhar Limit in astrophysics?",options:["3.2 solar masses","0.8 solar masses","2.0 solar masses","1.4 solar masses"],correct:3,topic:"Space",explanation:"The Chandrasekhar Limit (1.4 solar masses) is the maximum mass of a stable white dwarf star. Beyond this limit, electron degeneracy pressure cannot prevent gravitational collapse."},
+  {question:"What is the Golgi Apparatus's primary function in eukaryotic cells?",options:["Processing and packaging proteins and lipids for secretion or intracellular use","DNA replication and repair","ATP production via oxidative phosphorylation","Protein synthesis via mRNA translation"],correct:0,topic:"Biology",explanation:"The Golgi apparatus (or Golgi complex) functions as the cell's post office - it modifies, sorts, and packages proteins and lipids received from the ER for secretion or delivery to other organelles."},
+  {question:"In which year was the first Five Year Plan of India launched and who chaired the Planning Commission?",options:["1953 - C.D. Deshmukh","1950 - B.R. Ambedkar","1952 - Sardar Patel","1951 - Jawaharlal Nehru"],correct:3,topic:"Indian History",explanation:"India's First Five Year Plan was launched in 1951, with Prime Minister Jawaharlal Nehru as the first chairman of the Planning Commission, focusing on agriculture and irrigation."},
+  {question:"What is the O(n log n) sorting algorithm that uses a heap data structure?",options:["Merge Sort","Heap Sort","Quick Sort","Bubble Sort"],correct:1,topic:"Computer Science",explanation:"Heap Sort uses a binary heap data structure to sort elements. It has O(n log n) time complexity in all cases (best, average, worst), unlike Quick Sort which degrades to O(n^2) in worst case."},
+  {question:"Which article of the Indian Constitution deals with the Right to Constitutional Remedies, called the 'heart and soul' of the Constitution by Ambedkar?",options:["Article 21","Article 19","Article 14","Article 32"],correct:3,topic:"Constitution",explanation:"Article 32 gives citizens the right to directly approach the Supreme Court to enforce Fundamental Rights. Dr. Ambedkar called it the 'heart and soul' of the Constitution."},
+  {question:"What is the exact melting point of pure iron?",options:["1414 degrees C","1538 degrees C","1246 degrees C","1085 degrees C"],correct:1,topic:"Chemistry",explanation:"Pure iron melts at 1538 degrees Celsius (2800 degrees Fahrenheit). This high melting point makes iron and steel suitable for high-temperature industrial applications."},
+  {question:"Which cognitive bias describes people's tendency to search for information confirming their pre-existing beliefs?",options:["Confirmation Bias","Anchoring Bias","Dunning-Kruger Effect","Availability Heuristic"],correct:0,topic:"Psychology",explanation:"Confirmation Bias is the tendency to search for, interpret, and recall information in a way that confirms one's pre-existing beliefs while ignoring contradictory evidence."},
+  {question:"What is the primary mechanism by which Metformin reduces blood glucose in Type 2 diabetes?",options:["Stimulates glucagon secretion from alpha cells","Increases glucose absorption in intestines","Stimulates insulin secretion from beta cells","Inhibits hepatic glucose production by activating AMPK pathway"],correct:3,topic:"Biology",explanation:"Metformin primarily works by activating AMP-activated protein kinase (AMPK) in the liver, which suppresses hepatic gluconeogenesis (glucose production) and decreases intestinal glucose absorption."},
+  {question:"What is the second law of thermodynamics in terms of entropy?",options:["Entropy of an isolated system never decreases, and increases in irreversible processes","All spontaneous processes are reversible","Entropy of an isolated system always decreases over time","Energy is always conserved in all processes"],correct:0,topic:"Physics",explanation:"The second law states that the total entropy of an isolated system can only remain constant (reversible) or increase (irreversible) - entropy never spontaneously decreases, explaining the arrow of time."},
+  {question:"What is the time complexity of searching in a balanced Binary Search Tree?",options:["O(log n)","O(n)","O(1)","O(n log n)"],correct:0,topic:"Computer Science",explanation:"A balanced BST (like AVL or Red-Black tree) has O(log n) search time because at each node, the search space is halved. In an unbalanced tree this degrades to O(n)."}
 ];
 
 var MEDIUM_QS = [
-  {question:"Which Article of the Indian Constitution deals with the Right to Life and Personal Liberty?",options:["Article 14","Article 17","Article 19","Article 21"],correct:3,topic:"Constitution of India",explanation:"Article 21 states that no person shall be deprived of life or personal liberty except by procedure established by law."},
-  {question:"What is the term for buying goods at a lower price and selling at a higher price?",options:["Speculation","Arbitrage","Hedging","Leverage"],correct:1,topic:"Business",explanation:"Arbitrage is the practice of taking advantage of price differences in different markets to earn a profit."},
-  {question:"Who was the first Indian to win a Nobel Prize?",options:["C.V. Raman","Amartya Sen","Rabindranath Tagore","Mother Teresa"],correct:2,topic:"Indian History",explanation:"Rabindranath Tagore won the Nobel Prize in Literature in 1913 for his collection Gitanjali."},
-  {question:"What is the P/E ratio in stock market analysis?",options:["Profit to Equity ratio","Price to Earnings ratio","Productivity to Expenditure ratio","Premium to Expense ratio"],correct:1,topic:"Economics",explanation:"P/E ratio (Price to Earnings) measures a company's share price relative to its earnings per share."},
-  {question:"Which planet has the Great Red Spot?",options:["Mars","Saturn","Jupiter","Neptune"],correct:2,topic:"Space",explanation:"Jupiter's Great Red Spot is a giant storm that has persisted for at least 350 years."},
-  {question:"What is the Doctrine of Separation of Powers?",options:["Division of land among states","Division of government into legislature, executive and judiciary","Division of military power","Division of tax collection"],correct:1,topic:"Constitution of India",explanation:"The Doctrine of Separation of Powers divides government into three independent branches: legislature, executive and judiciary."},
-  {question:"Who directed the Bollywood film 'Mughal-E-Azam'?",options:["Raj Kapoor","Guru Dutt","K. Asif","Mehboob Khan"],correct:2,topic:"Bollywood",explanation:"Mughal-E-Azam (1960) was directed by K. Asif and remains one of the greatest Indian films ever made."},
-  {question:"What is the formula for calculating profit percentage?",options:["(Profit/CP) x 100","(Profit/SP) x 100","(CP/SP) x 100","(SP-CP) x 100"],correct:0,topic:"Profit and Loss",explanation:"Profit Percentage = (Profit / Cost Price) x 100, where Profit = Selling Price - Cost Price."},
-  {question:"Which country hosted the first modern Olympic Games?",options:["France","UK","USA","Greece"],correct:3,topic:"Olympics",explanation:"The first modern Olympic Games were held in Athens, Greece in 1896."},
-  {question:"What is the process by which plants make food using sunlight called?",options:["Respiration","Transpiration","Photosynthesis","Fermentation"],correct:2,topic:"Biology",explanation:"Photosynthesis is the process by which plants use sunlight, water and CO2 to produce glucose and oxygen."},
-  {question:"Which Indian law governs companies in India?",options:["Companies Act 1956","Companies Act 2013","SEBI Act 1992","FEMA 1999"],correct:1,topic:"Business",explanation:"The Companies Act 2013 is the primary legislation governing companies and corporate affairs in India."},
-  {question:"Who won the Nobel Peace Prize in 2014 along with Malala Yousafzai?",options:["Amartya Sen","Kailash Satyarthi","Narendra Modi","A.P.J. Abdul Kalam"],correct:1,topic:"Current Affairs",explanation:"Kailash Satyarthi, Indian child rights activist, won the Nobel Peace Prize 2014 jointly with Malala Yousafzai."},
-  {question:"What is the psychological term for fear of open spaces?",options:["Claustrophobia","Agoraphobia","Acrophobia","Xenophobia"],correct:1,topic:"Psychology",explanation:"Agoraphobia is an anxiety disorder characterized by fear of open or crowded spaces from which escape might be difficult."},
-  {question:"In the 1965 Indo-Pakistan War, which Indian general was known as the 'Sparrow'?",options:["Sam Manekshaw","Arjan Singh","Harbakhsh Singh","Raghu Raj"],correct:0,topic:"Wars",explanation:"General Sam Manekshaw was known as 'Sam Bahadur' but it was General Harbakhsh Singh who commanded in 1965; Air Marshal Arjan Singh led the IAF."},
-  {question:"What is the largest gland in the human body?",options:["Pancreas","Thyroid","Liver","Spleen"],correct:2,topic:"Human Body",explanation:"The liver is the largest internal gland, weighing about 1.5 kg and performing over 500 functions."},
-  {question:"Which Hollywood film won the Oscar for Best Picture in 2020?",options:["1917","Joker","Once Upon a Time in Hollywood","Parasite"],correct:3,topic:"Hollywood",explanation:"Parasite (South Korean film) won the Academy Award for Best Picture at the 2020 Oscars, a historic first for a non-English film."},
-  {question:"What does the term 'Bull Market' mean in stock markets?",options:["Market falling steadily","Market rising steadily","Market with high volatility","Market with foreign investment"],correct:1,topic:"Economics",explanation:"A bull market refers to a financial market experiencing sustained price increases and investor confidence."},
-  {question:"Who was the first Paralympic gold medalist from India?",options:["Mariyappan Thangavelu","Devendra Jhajharia","Murlikant Petkar","Deepa Malik"],correct:2,topic:"Para Olympics",explanation:"Murlikant Petkar won India's first Paralympic gold medal in swimming (50m freestyle) at the 1972 Heidelberg Paralympics."},
-  {question:"What is the Keynesian Theory in economics?",options:["Free markets self-regulate","Government spending drives economic growth","Trade deficits strengthen economies","Inflation is always beneficial"],correct:1,topic:"Economics",explanation:"Keynesian economics argues that government fiscal policy and spending can stimulate economic demand and growth, especially in recessions."},
-  {question:"Which Indian space mission discovered water on the Moon?",options:["Chandrayaan-1","Chandrayaan-2","Mangalyaan","ASTROSAT"],correct:0,topic:"Space",explanation:"Chandrayaan-1 (2008) discovered water molecules on the Moon's surface using its Moon Impact Probe."},
-  {question:"What is the Gross Profit formula?",options:["Net Sales - COGS","Net Sales + COGS","Net Sales x COGS","Net Sales / COGS"],correct:0,topic:"Profit and Loss",explanation:"Gross Profit = Net Sales minus Cost of Goods Sold (COGS). It shows profit before operating expenses."},
-  {question:"Which Indian author wrote 'The God of Small Things'?",options:["Vikram Seth","Salman Rushdie","Arundhati Roy","Amitav Ghosh"],correct:2,topic:"Literature",explanation:"Arundhati Roy won the Booker Prize in 1997 for 'The God of Small Things'."},
-  {question:"What is Cognitive Dissonance in psychology?",options:["Memory loss disorder","Mental discomfort from conflicting beliefs","Fear of public speaking","Inability to focus"],correct:1,topic:"Psychology",explanation:"Cognitive dissonance is the mental discomfort experienced when holding two or more contradictory beliefs simultaneously."},
-  {question:"Which Article of the Indian Constitution abolished untouchability?",options:["Article 14","Article 15","Article 17","Article 19"],correct:2,topic:"Constitution of India",explanation:"Article 17 of the Indian Constitution abolishes untouchability and makes its practice a punishable offence."},
-  {question:"What does 'ROI' stand for in business?",options:["Rate of Investment","Return on Investment","Revenue of Income","Rate of Inflation"],correct:1,topic:"Business",explanation:"ROI (Return on Investment) measures the gain or loss generated relative to the amount of money invested."},
-  {question:"Who developed the theory of evolution by natural selection?",options:["Gregor Mendel","Louis Pasteur","Charles Darwin","Isaac Newton"],correct:2,topic:"Science",explanation:"Charles Darwin proposed the theory of evolution by natural selection in his 1859 work 'On the Origin of Species'."},
-  {question:"What is the Preamble to the Indian Constitution?",options:["Introduction to Parliament","Introductory statement declaring the source, goals and nature of the Constitution","List of Fundamental Rights","List of Directive Principles"],correct:1,topic:"Constitution of India",explanation:"The Preamble is the introductory statement of the Indian Constitution declaring it a Sovereign, Socialist, Secular, Democratic Republic."},
-  {question:"Who won the Bharat Ratna in 2024?",options:["Lata Mangeshkar","Karpoori Thakur","Narendra Modi","Sachin Tendulkar"],correct:1,topic:"Current Affairs",explanation:"Karpoori Thakur, former Bihar CM, was posthumously awarded the Bharat Ratna in 2024."},
-  {question:"What is the half-life of Carbon-14 used in radiocarbon dating?",options:["1,730 years","5,730 years","17,300 years","57,300 years"],correct:1,topic:"Chemistry",explanation:"Carbon-14 has a half-life of approximately 5,730 years, making it useful for dating organic materials up to about 50,000 years old."},
-  {question:"Which country has the largest proven oil reserves?",options:["Saudi Arabia","Russia","UAE","Venezuela"],correct:3,topic:"World GK",explanation:"Venezuela has the world's largest proven oil reserves at about 303 billion barrels according to OPEC data."},
+  {question:"What is the Heisenberg Uncertainty Principle and what does it state exactly?",options:["Energy is uncertain at quantum level","A particle cannot have both position and momentum defined simultaneously; their uncertainties multiply to at least h/4pi","Quantum particles exist in superposition until observed","The speed of light is the universal speed limit"],correct:1,topic:"Quantum Physics",explanation:"Heisenberg's Uncertainty Principle states that delta(x) * delta(p) >= h/4pi - the more precisely a particle's position is known, the less precisely its momentum can be known, and vice versa."},
+  {question:"What is the Black-Scholes formula used to calculate?",options:["Beta coefficient of a security","Theoretical price of European call and put options on non-dividend paying stocks","Net present value of future cash flows","Expected return of a stock portfolio"],correct:1,topic:"Trading",explanation:"The Black-Scholes model (1973) provides a theoretical framework for pricing European-style options. The formula uses stock price, strike price, time to expiry, risk-free rate, and volatility."},
+  {question:"What is the exact significance of the Preamble statement 'We, the People of India' in constitutional interpretation?",options:["It means Parliament is supreme","It means citizens can directly amend the constitution","It establishes parliamentary democracy as the only valid form","It indicates people are the ultimate source of constitutional authority and sovereignty"],correct:3,topic:"Constitution",explanation:"'We, the People' establishes popular sovereignty - the Constitution derives its authority from the people of India, not from any external power or parliament, making the people the ultimate sovereign."},
+  {question:"In the IS-LM model, what happens to the LM curve when the central bank increases money supply?",options:["LM curve shifts left, increasing interest rates","LM curve shifts right, decreasing interest rates and increasing output","LM curve remains unchanged, only IS curve shifts","LM curve becomes vertical"],correct:1,topic:"Economics",explanation:"An increase in money supply shifts the LM curve rightward (downward) in IS-LM framework, resulting in lower interest rates and higher equilibrium income/output as money market equilibrium shifts."},
+  {question:"What is the Hardy-Weinberg equilibrium and which condition is NOT required to maintain it?",options:["Frequent mutations between alleles","No natural selection acting on the alleles","Random mating within the population","No genetic drift - population must be infinitely large"],correct:0,topic:"Biology",explanation:"Hardy-Weinberg equilibrium requires: no mutation, no natural selection, random mating, no genetic drift (infinite population), no gene flow. Frequent mutation violates this - it changes allele frequencies."},
+  {question:"What is the KMP (Knuth-Morris-Pratt) algorithm's time complexity for pattern matching?",options:["O(m log n)","O(n^2)","O(m*n) where m=text length, n=pattern length","O(m+n) where m=text length, n=pattern length"],correct:3,topic:"Computer Science",explanation:"KMP algorithm achieves O(m+n) time complexity using a precomputed failure function. Unlike naive O(m*n) approach, it never re-examines characters, making it optimal for pattern matching."},
+  {question:"What is the Gibbs Free Energy equation and what does negative delta G signify?",options:["G = H - TS; negative G means spontaneous reaction at constant T and P","G = H/TS; negative G means reaction needs activation energy","G = U + PV; negative G means endothermic","G = H + TS; negative G means non-spontaneous"],correct:0,topic:"Chemistry",explanation:"Gibbs Free Energy G = H - TS (where H = enthalpy, T = temperature, S = entropy). A negative delta G indicates a thermodynamically spontaneous process under constant temperature and pressure."},
+  {question:"What is the Transformer architecture's self-attention mechanism? What does it compute?",options:["Applies max-pooling over sequence positions","Computes weighted sum of values using dot product of queries and keys scaled by square root of dimension","Applies recurrent processing with hidden states","Computes convolutions over input sequence"],correct:1,topic:"AI",explanation:"Self-attention computes Attention(Q,K,V) = softmax(QK^T / sqrt(d_k))V - each position attends to all others by computing query-key dot products, scaled to prevent vanishing gradients, then weighting values."},
+  {question:"What is the Biot-Savart Law in electromagnetism?",options:["Relates magnetic flux to changing electric field","Gives the magnetic field produced by a current-carrying conductor element","Describes electromagnetic induction","Relates electric field to charge distribution"],correct:1,topic:"Physics",explanation:"Biot-Savart Law: dB = (mu_0/4pi) * (I dl x r_hat)/r^2. It gives the infinitesimal magnetic field dB produced by an infinitesimal current element I*dl at a distance r, analogous to Coulomb's law for magnetic fields."},
+  {question:"In the Accounts standard AS-16, when is borrowing cost capitalized?",options:["Borrowing costs are capitalized only if project exceeds 5 years","Only borrowing from banks can be capitalized","All borrowing costs are always expensed","Borrowing costs directly attributable to acquisition of qualifying assets are capitalized until asset is ready for intended use"],correct:3,topic:"Accounts",explanation:"AS-16 (Borrowing Costs) mandates capitalization of borrowing costs directly attributable to acquisition, construction, or production of a 'qualifying asset' - assets taking substantial time. Capitalization stops when asset is ready for use."},
+  {question:"What is the significance of the Mundell-Fleming Trilemma in international economics?",options:["A country cannot simultaneously have fixed exchange rate, free capital mobility and independent monetary policy","Central banks cannot control both money supply and interest rates","Countries cannot simultaneously have high growth, low inflation and full employment","Trade deficits always lead to currency depreciation"],correct:0,topic:"Economics",explanation:"The Mundell-Fleming Trilemma (impossible trinity) states a country can only achieve 2 of 3 goals simultaneously: fixed exchange rate, free capital movement, and independent monetary policy."},
+  {question:"What is the difference between Supervised and Unsupervised Learning in ML? What is K-Means?",options:["Supervised uses labeled data to learn mappings; unsupervised finds hidden patterns. K-Means is unsupervised clustering algorithm","Supervised needs labels; unsupervised doesn't. K-Means is supervised classification","Both require labeled data but K-Means uses reinforcement","Supervised and unsupervised are the same; K-Means is reinforcement learning"],correct:0,topic:"AI",explanation:"Supervised learning trains on labeled input-output pairs (classification, regression). Unsupervised learning finds structure in unlabeled data. K-Means is an unsupervised clustering algorithm that partitions data into k clusters by minimizing intra-cluster variance."},
+  {question:"What is the specific constitutional provision (Article and clause) that prohibits child labour in India?",options:["Article 24","Article 19(1)(g)","Article 23(1)","Article 21A"],correct:0,topic:"Constitution",explanation:"Article 24 of the Indian Constitution prohibits employment of children below 14 years in any factory, mine, or hazardous employment. Article 21A provides free and compulsory education for children 6-14."},
+  {question:"What is the time complexity of Dijkstra's shortest path algorithm using a min-heap?",options:["O(V + E)","O(V log E)","O(E log V) where E=edges and V=vertices","O(V^2)"],correct:2,topic:"Computer Science",explanation:"Dijkstra's algorithm with a binary min-heap has O((V + E) log V) complexity, often stated as O(E log V) for connected graphs. Each vertex extraction from heap costs O(log V) and each edge relaxation costs O(log V)."},
+  {question:"What is the concept of 'Adverse Selection' in economics and insurance?",options:["When companies select the best employees","When investors select stocks based on inside information","When governments select industries for protection","When high-risk individuals are more likely to purchase insurance, leading to market failure"],correct:3,topic:"Economics",explanation:"Adverse selection occurs due to information asymmetry - higher-risk individuals are more likely to seek insurance than lower-risk ones. Without ability to distinguish risk types, insurers must charge average premiums, driving out low-risk customers."},
+  {question:"What is the Van't Hoff Factor in colligative properties of solutions?",options:["Ratio of moles of solute to solvent","Ratio of vapor pressures of solution and solvent","Measure of osmotic pressure directly","Number of ions a solute dissociates into in solution, affecting colligative properties"],correct:3,topic:"Chemistry",explanation:"The Van't Hoff factor (i) represents the number of particles a solute dissociates into when dissolved. For NaCl, i=2 (Na+ and Cl-). It multiplies colligative property calculations: delta T_f = i*K_f*m."},
+  {question:"What is the CAPM formula and what does beta represent?",options:["E(R) = Rf + beta*(Rm-Rf); beta is systematic risk measuring sensitivity of security's returns to market returns","E(R) = alpha + beta*Rf; beta is total risk","E(R) = Rm * beta/Rf; beta is unsystematic risk","E(R) = Rf + alpha*(Rm-Rf); beta is market risk"],correct:0,topic:"Trading",explanation:"Capital Asset Pricing Model: Expected Return = Risk-free rate + Beta*(Market Return - Risk-free rate). Beta measures systematic (undiversifiable) risk - how much a security's price moves relative to the overall market."},
+  {question:"What is the significance of Kohlberg's Theory of Moral Development Stage 6?",options:["Following rules to avoid punishment","Social contract and utility","Universal ethical principles that transcend laws and social agreements","Following laws because they represent social contracts"],correct:2,topic:"Psychology",explanation:"Kohlberg's Stage 6 (Post-conventional) represents the highest moral development - acting according to self-chosen universal ethical principles (justice, human dignity, equality) even when they conflict with laws."},
+  {question:"What is the specific mechanism of DNA replication called 'semi-conservative'?",options:["Only one strand is used as template and only one new DNA is made","Both original strands remain together and two copies are made alongside","Both strands are broken down and two completely new molecules are synthesized","Each new DNA molecule has one original and one new strand"],correct:3,topic:"Biology",explanation:"Semi-conservative replication (proved by Meselson-Stahl experiment 1958): the double helix unwinds, each original strand serves as template for a new complementary strand, producing two double helices each with one old and one new strand."},
+  {question:"In Mechanical Engineering, what is the 'Modulus of Elasticity' (Young's Modulus)?",options:["Ratio of shear stress to shear strain","Ratio of tensile stress to tensile strain within elastic limit","Maximum stress a material can withstand before fracture","Energy stored per unit volume at elastic limit"],correct:1,topic:"Engineering",explanation:"Young's Modulus (E) = Stress/Strain = (F/A)/(delta_L/L) within the proportional limit. It measures a material's stiffness/resistance to elastic deformation. Steel ~200 GPa, Aluminum ~70 GPa, Rubber ~0.01-0.1 GPa."},
+  {question:"What is the exact holding in the Maneka Gandhi v Union of India (1978) case?",options:["Procedure established by law must be just, fair and reasonable; expanded scope of Articles 14, 19 and 21","Right to travel abroad is not a fundamental right","Only courts can interpret Constitution","Parliament can amend any fundamental right"]  ,correct:0,topic:"Law",explanation:"Maneka Gandhi case revolutionized Article 21 interpretation - 'procedure established by law' must be fair, just and reasonable (not arbitrary). The court established interrelationship between Articles 14, 19 and 21, expanding fundamental rights protection significantly."}
 ];
 
 var HARD_QS = [
-  {question:"What is the Dworkinian concept of 'Rights as Trumps' in legal theory?",options:["Rights can be overridden by majority preference","Rights override collective goals and policy justifications","Rights are created by governments","Rights are absolute and unlimited"],correct:1,topic:"Law",explanation:"Ronald Dworkin argued that rights 'trump' ordinary policy considerations - even when overriding rights is collectively beneficial, it remains wrong."},
-  {question:"What is the Mundell-Fleming Model?",options:["Model of international trade barriers","Open economy macroeconomics model linking exchange rates, interest rates and output","Model of domestic inflation","Model of corporate taxation"],correct:1,topic:"Economics",explanation:"The Mundell-Fleming model extends IS-LM to open economies, showing the effectiveness of monetary and fiscal policies under different exchange rate regimes."},
-  {question:"Which Article of the Indian Constitution deals with the procedure for Constitutional Amendments?",options:["Article 356","Article 368","Article 370","Article 371"],correct:1,topic:"Constitution of India",explanation:"Article 368 lays down the procedure for amending the Indian Constitution, distinguishing between simple majority, special majority and ratification requirements."},
-  {question:"What is the Chandrasekhar Limit in astrophysics?",options:["1.0 solar masses","1.4 solar masses","1.8 solar masses","2.0 solar masses"],correct:1,topic:"Space",explanation:"The Chandrasekhar Limit (1.4 solar masses) is the maximum mass of a stable white dwarf star - beyond this, the star collapses into a neutron star or black hole."},
-  {question:"What is the Riemann Hypothesis in mathematics?",options:["All prime numbers are odd","Non-trivial zeros of the Riemann zeta function lie on the critical line Re(s)=1/2","Every even integer is the sum of two primes","There are infinitely many twin primes"],correct:1,topic:"Mathematics",explanation:"The Riemann Hypothesis conjectures that all non-trivial zeros of the zeta function have real part 1/2. It remains one of the greatest unsolved problems in mathematics."},
-  {question:"Who propounded the Two-Nation Theory that led to the Partition of India?",options:["Mohammad Ali Jinnah","Allama Iqbal","Sir Syed Ahmed Khan","Liaquat Ali Khan"],correct:1,topic:"Indian History",explanation:"Sir Allama Iqbal first proposed the concept of a separate Muslim state in his 1930 Allahabad Address; Jinnah later championed the Two-Nation Theory politically."},
-  {question:"What is Planck's Constant approximately equal to?",options:["6.626 x 10^-34 Js","6.626 x 10^-24 Js","6.626 x 10^34 Js","3.14 x 10^-34 Js"],correct:0,topic:"Physics",explanation:"Planck's constant h = 6.626 x 10^-34 joule-seconds, fundamental to quantum mechanics relating energy and frequency of photons."},
-  {question:"Which landmark Indian Supreme Court case established the Basic Structure Doctrine?",options:["Golaknath v State of Punjab","Kesavananda Bharati v State of Kerala","Maneka Gandhi v Union of India","Minerva Mills v Union of India"],correct:1,topic:"Law",explanation:"Kesavananda Bharati v State of Kerala (1973) established that Parliament cannot amend the 'basic structure' of the Constitution even with a special majority."},
-  {question:"What is the Krebs Cycle in biochemistry?",options:["Process of DNA replication","Series of chemical reactions used by cells to generate energy from acetyl-CoA","Process of protein synthesis","Mechanism of neural signal transmission"],correct:1,topic:"Biology",explanation:"The Krebs Cycle (citric acid cycle) is a series of reactions in mitochondria that oxidizes acetyl-CoA to CO2 generating NADH and FADH2 for ATP production."},
-  {question:"What was the significance of the Battle of Plassey in 1757?",options:["Ended Mughal Empire","Established British supremacy in Bengal beginning colonial rule","Defeated the Marathas","Ended French influence in India"],correct:1,topic:"Wars",explanation:"The Battle of Plassey (23 June 1757) saw Robert Clive defeat Siraj-ud-Daulah, establishing British East India Company's control over Bengal and beginning colonial rule."},
-  {question:"What is the Drake Equation used for?",options:["Calculating gravitational forces","Estimating the number of active communicating extraterrestrial civilizations","Measuring dark matter","Calculating stellar distances"],correct:1,topic:"Space",explanation:"Frank Drake's equation (1961) estimates the number of technologically advanced civilizations in the Milky Way capable of communicating with Earth."},
-  {question:"What is the Sapir-Whorf Hypothesis in linguistics?",options:["All languages evolve from one origin","Language shapes thought and perception of reality","Grammar is universal across languages","Writing precedes speech in human evolution"],correct:1,topic:"Psychology",explanation:"The Sapir-Whorf (linguistic relativity) hypothesis proposes that the language we speak influences or determines how we perceive and think about the world."},
-  {question:"In which year did India conduct its first nuclear test called 'Smiling Buddha'?",options:["1968","1972","1974","1978"],correct:2,topic:"Current Affairs",explanation:"India's first nuclear test 'Smiling Buddha' (Operation Pokhran-I) was conducted on 18 May 1974 in Rajasthan's Pokhran site."},
-  {question:"What is the Fisher Effect in economics?",options:["Exchange rates adjust to purchasing power parity","Nominal interest rates adjust to expected inflation preserving real rates","Trade deficits self-correct over time","Inflation always follows money supply growth"],correct:1,topic:"Economics",explanation:"The Fisher Effect states that nominal interest rates rise point-for-point with expected inflation, keeping real interest rates constant in the long run."},
-  {question:"Who discovered the Neutron and in which year?",options:["Ernest Rutherford in 1911","Niels Bohr in 1913","James Chadwick in 1932","Paul Dirac in 1928"],correct:2,topic:"Physics",explanation:"James Chadwick discovered the neutron in 1932 through experiments bombarding beryllium with alpha particles, earning him the 1935 Nobel Prize in Physics."},
-  {question:"What is the Doctrine of Promissory Estoppel in Indian contract law?",options:["A contract must be in writing","A party cannot go back on a promise when the other relied on it to their detriment","Contracts with minors are void","Consideration must be adequate"],correct:1,topic:"Law",explanation:"Promissory Estoppel prevents a party from reneging on a clear and unambiguous promise when the promisee has relied on it to their detriment, even without formal consideration."},
-  {question:"What does CRISPR-Cas9 technology enable in genetic research?",options:["Cloning entire organisms","Precise editing of DNA sequences by cutting and modifying specific genes","Sequencing entire genomes rapidly","Creating synthetic proteins"],correct:1,topic:"Biology",explanation:"CRISPR-Cas9 is a revolutionary gene-editing tool that allows scientists to precisely cut, add or alter sections of DNA, transforming medicine, agriculture and research."},
-  {question:"Who was awarded the Bharat Ratna posthumously in 1999 for contributions to music?",options:["Lata Mangeshkar","Ravi Shankar","M.S. Subbulakshmi","Bismillah Khan"],correct:2,topic:"Current Affairs",explanation:"M.S. Subbulakshmi (M.S. Subbalakshmi), the Carnatic vocalist, was the first musician to receive the Bharat Ratna in 1998 (not 1999)."},
-  {question:"What is the Nash Equilibrium in Game Theory?",options:["The outcome where all players win","Stable state where no player benefits by changing strategy unilaterally","The outcome with maximum collective benefit","The strategy chosen by the dominant player"],correct:1,topic:"Mathematics",explanation:"Nash Equilibrium is a state in a game where no player can improve their outcome by unilaterally changing their strategy, given others' strategies remain the same."},
-  {question:"Which Indian General led the 1971 Indo-Pakistan War and was later elevated to Field Marshal?",options:["Arjan Singh","K.M. Cariappa","Sam Manekshaw","Harbakhsh Singh"],correct:2,topic:"Wars",explanation:"General Sam Manekshaw commanded the Indian Armed Forces in the 1971 war leading to Bangladesh's liberation, and was later elevated to the rank of Field Marshal in 1973."},
-  {question:"What is the Photoelectric Effect and who explained it?",options:["Diffraction of light by particles - explained by Maxwell","Emission of electrons when light hits a metal surface - explained by Einstein","Bending of light around corners - explained by Huygens","Polarization of light - explained by Malus"],correct:1,topic:"Physics",explanation:"The Photoelectric Effect is the emission of electrons when light strikes a metal surface. Einstein explained it in 1905 using photon theory, winning the 1921 Nobel Prize."},
-  {question:"What is the Permanent Account Number (PAN) used for in India?",options:["Identity proof for voting","Unique identifier for tax purposes tracking financial transactions","Passport application","Driving license verification"],correct:1,topic:"Business",explanation:"PAN is a 10-character alphanumeric code issued by the Income Tax Department to track all financial transactions for tax assessment purposes."},
-  {question:"What is the Higgs Boson and why was its discovery significant?",options:["Particle carrying electromagnetic force","Fundamental particle that gives other particles their mass, completing the Standard Model","Anti-matter particle","Dark matter particle"],correct:1,topic:"Physics",explanation:"The Higgs Boson, discovered at CERN in 2012, is the particle associated with the Higgs field that gives fundamental particles their mass, completing the Standard Model of particle physics."},
-  {question:"Which case established that the Right to Privacy is a Fundamental Right in India?",options:["Kesavananda Bharati case","Maneka Gandhi case","Justice K.S. Puttaswamy case","Minerva Mills case"],correct:2,topic:"Law",explanation:"In Justice K.S. Puttaswamy v Union of India (2017), a 9-judge Supreme Court bench unanimously held that the Right to Privacy is a fundamental right under Article 21."},
-  {question:"What is the concept of 'Comparative Advantage' in international trade?",options:["Countries should only export what they produce best absolutely","Countries benefit by specializing in goods with lower opportunity costs relative to trading partners","Free trade always benefits all nations equally","Trade deficits always harm economies"],correct:1,topic:"Economics",explanation:"David Ricardo's Comparative Advantage shows nations gain from trade by specializing where their opportunity cost is relatively lower, even if another country is more efficient at everything."},
-  {question:"What was Operation Shakti (Pokhran-II) and when did it occur?",options:["Satellite launch in 1999","Series of five nuclear tests in May 1998","Naval exercise in 2000","Surgical strikes in 2016"],correct:1,topic:"Current Affairs",explanation:"Operation Shakti (Pokhran-II) was a series of five nuclear bomb tests conducted by India on 11-13 May 1998 in Rajasthan, making India a declared nuclear state."},
-  {question:"What is the Dunning-Kruger Effect in cognitive psychology?",options:["Intelligence increases with age","People with limited knowledge overestimate their competence","Experts always underestimate task difficulty","Memory improves under stress"],correct:1,topic:"Psychology",explanation:"The Dunning-Kruger Effect is a cognitive bias where people with limited knowledge in a domain overestimate their own competence, while genuine experts tend to underestimate theirs."},
-  {question:"What is the Wien's Displacement Law in physics?",options:["Wavelength of sound changes with temperature","Peak wavelength of blackbody radiation is inversely proportional to its temperature","Light speed varies with medium density","Electrical resistance increases linearly with temperature"],correct:1,topic:"Physics",explanation:"Wien's Displacement Law states that the peak wavelength of radiation emitted by a black body is inversely proportional to its absolute temperature (wavelength x temperature = 2.898 x 10^-3 mK)."},
-  {question:"Which international organization was established by the Bretton Woods Agreement in 1944?",options:["United Nations","NATO","IMF and World Bank","WTO"],correct:2,topic:"World Organizations",explanation:"The Bretton Woods Conference (1944) established the International Monetary Fund (IMF) and International Bank for Reconstruction and Development (World Bank) to stabilize global economy post WWII."},
-  {question:"What is the concept of 'Bounded Rationality' proposed by Herbert Simon?",options:["Humans make perfectly rational decisions","Decision-making is limited by cognitive capacity, time and available information","Markets are always rational","Rational actors never make mistakes"],correct:1,topic:"Psychology",explanation:"Herbert Simon's Bounded Rationality concept argues that human decision-making is constrained by limited information, cognitive limitations and time - leading to satisficing rather than optimizing."},
+  {question:"What is the exact statement of the Riemann Hypothesis and why is it unsolved?",options:["Every even integer greater than 2 is sum of two primes","Non-trivial zeros of Riemann zeta function lie on critical line Re(s)=1/2","All prime numbers are odd","There are infinitely many twin primes"],correct:1,topic:"Mathematics",explanation:"The Riemann Hypothesis conjectures that all non-trivial zeros of the Riemann zeta function zeta(s) have real part 1/2. Unsolved since 1859, it has deep implications for prime number distribution. It's one of the Millennium Prize Problems worth $1 million."},
+  {question:"What is the exact mechanism of CRISPR-Cas9 gene editing at the molecular level?",options:["Cas9 uses RNA interference to silence genes","Cas9 inserts new DNA without cutting existing sequence","Cas9 methylates target DNA preventing transcription","Guide RNA directs Cas9 endonuclease to specific DNA sequence where it creates double-strand break; repair mechanisms then edit the sequence"],correct:3,topic:"Biology",explanation:"CRISPR-Cas9: guide RNA (gRNA) complementary to target sequence forms complex with Cas9 protein; Cas9 unwinds DNA and creates double-strand break at precise location; cell repairs via NHEJ (causing insertions/deletions) or HDR (allowing precise editing)."},
+  {question:"In quantum field theory, what does the Dirac Equation describe that Schrodinger's equation does not?",options:["Relativistic quantum mechanics of spin-1/2 particles, predicting antimatter and electron spin naturally","Wave-particle duality at atomic scale","Many-body quantum systems","Tunneling probability through potential barriers"],correct:0,topic:"Quantum Physics",explanation:"Dirac's equation (1928) combines special relativity with quantum mechanics for spin-1/2 particles. Unlike non-relativistic Schrodinger equation, it naturally predicts electron spin, magnetic moment, and antimatter (positron) - confirmed by Anderson in 1932."},
+  {question:"What is the exact condition for NP-completeness and give an example?",options:["Problems with polynomial space complexity","Problems requiring exponential time to solve and verify","Problems where solution can be verified in polynomial time AND every NP problem reduces to it; example: 3-SAT or Travelling Salesman","Problems solvable in polynomial time"],correct:2,topic:"Computer Science",explanation:"NP-complete: problems in NP (solution verifiable in polynomial time) to which all NP problems reduce in polynomial time. Cook's theorem (1971) proved SAT is NP-complete. TSP, graph coloring, clique problems are NP-complete. If P=NP, all would be polynomial-solvable."},
+  {question:"What is the Tolman-Oppenheimer-Volkoff (TOV) limit in astrophysics?",options:["Minimum mass of a black hole","Maximum mass of a white dwarf star","Maximum mass of a neutron star before collapsing into a black hole, approximately 0.7-3 solar masses","Minimum mass required for nuclear fusion in stars"],correct:2,topic:"Space",explanation:"The TOV limit (1939) is the maximum mass a neutron star can have, supported by neutron degeneracy pressure. Beyond ~0.7-3 solar masses (exact value uncertain due to dense matter equations), gravitational collapse forms a black hole."},
+  {question:"What is the specific mechanism of ATP synthesis in the mitochondria via chemiosmosis?",options:["ATP synthase uses direct chemical reactions between ADP and phosphate","Calcium ions directly phosphorylate ADP to form ATP","Proton gradient created by electron transport chain drives ATP synthase's F0 rotor; rotation of F1 causes conformational changes in beta subunits catalyzing ATP synthesis","ATP is synthesized directly from glucose in the matrix"],correct:2,topic:"Biology",explanation:"Mitchell's chemiosmosis: ETC pumps H+ across inner membrane creating proton motive force; H+ flows back through ATP synthase's F0 (transmembrane) domain causing rotation; mechanical energy transmitted to F1 domain causes beta subunits to cycle through open-loose-tight conformations, synthesizing ATP from ADP+Pi."},
+  {question:"What is the exact holding of the Kesavananda Bharati case (1973) regarding Parliament's amendment power?",options:["Parliament can amend fundamental rights completely","Parliament has unlimited power to amend Constitution","Only Supreme Court can amend Constitution","Parliament can amend any part of Constitution but cannot alter or destroy its Basic Structure"],correct:3,topic:"Law",explanation:"By 7:6 majority, the Supreme Court held Parliament has wide amending power under Article 368 but cannot alter the 'Basic Structure' of the Constitution. Basic structure includes supremacy of Constitution, republican democratic form, separation of powers, judicial review, and fundamental rights."},
+  {question:"What is the Shannon-Hartley theorem and what is the significance of channel capacity C?",options:["C = B * SNR; capacity grows linearly with bandwidth","C = log2(B*S/N); capacity depends only on SNR","C = B * log2(1 + S/N); maximum error-free information rate through channel with bandwidth B and signal-to-noise ratio S/N","C = B^2 / N; capacity is limited only by noise"],correct:2,topic:"Computer Science",explanation:"Shannon-Hartley theorem: C = B*log2(1 + S/N) bits per second. It gives the theoretical maximum rate at which error-free information can be transmitted over a channel with bandwidth B Hz and SNR S/N. This is Shannon's capacity limit - no code can exceed it."},
+  {question:"What is the mechanism of action of beta-lactam antibiotics like Penicillin?",options:["Inhibit DNA gyrase preventing DNA replication","Inhibit transpeptidase enzyme preventing cross-linking of peptidoglycan cell wall, causing bacterial lysis","Disrupt cell membrane by creating ion channels","Inhibit protein synthesis by binding 30S ribosomal subunit"],correct:1,topic:"Biology",explanation:"Beta-lactam antibiotics contain the beta-lactam ring that irreversibly binds to transpeptidase (penicillin-binding proteins/PBPs), blocking the final cross-linking step of peptidoglycan synthesis. Without cross-linking, the bacterial cell wall becomes structurally weak and bacteria lyse due to osmotic pressure."},
+  {question:"What is the exact content of the Demotion Rule in Indian Administrative Service rules regarding seniority?",options:["Central deputation is mandatory after 9 years","An officer of higher batch can be superseded in promotion if two lower batch officers of the same state cadre are promoted ahead","IAS officers cannot be demoted for 5 years","Seniority is determined only by year of allotment"],correct:1,topic:"Law",explanation:"Under IAS Seniority Rules, if two officers of the same state cadre belonging to junior batches are promoted ahead of a senior batch officer for two consecutive years, the senior officer is 'deemed superseded' and loses seniority for future promotions. This discourages stagnation."},
+  {question:"What is the exact formula for the Nernst Equation and what does E represent?",options:["E = E0 + (RT/nF)ln([products]/[reactants])","E = E0 - (RT/nF)ln([products]/[reactants]); E is cell potential under non-standard conditions","E = E0 * pH","E = -deltaG/nF only at standard conditions"],correct:1,topic:"Chemistry",explanation:"Nernst Equation: E = E0 - (RT/nF)ln(Q) where E0=standard potential, R=gas constant, T=temperature, n=electrons transferred, F=Faraday constant, Q=reaction quotient. At 25C: E = E0 - (0.0592/n)log(Q). It calculates cell potential at any concentration."},
+  {question:"In reinforcement learning, what is the Bellman Equation for Q-learning?",options:["Q(s,a) = R(s,a) only","Q(s,a) = R(s,a) + gamma * max_a'[Q(s',a')]; discounted future value of best action in next state","Q(s,a) = sum of all past rewards","Q(s,a) = probability of action a in state s"],correct:1,topic:"AI",explanation:"Bellman optimality equation for Q-learning: Q*(s,a) = E[r + gamma*max_a'Q*(s',a')]. The optimal Q-value equals immediate reward r plus discounted (gamma) maximum Q-value achievable from next state s'. TD learning updates: Q(s,a) += alpha[r + gamma*max Q(s',a') - Q(s,a)]."},
+  {question:"What is the Bode plot and what do gain margin and phase margin indicate?",options:["Time-domain response plot; margins indicate stability duration","Displacement vs velocity plot; margins indicate resonance","Frequency response plots of gain and phase vs frequency; gain margin is gain at phase crossover frequency, phase margin is phase at gain crossover - both measure stability robustness","Root locus plot; margins indicate pole locations"],correct:2,topic:"Engineering",explanation:"Bode plots show system's frequency response: gain (dB) and phase (degrees) vs log frequency. Gain margin = 1/|G(jwpc)| at phase crossover (phase=-180 deg). Phase margin = 180 + phase at gain crossover (|G|=1). Positive margins indicate stable system; larger margins mean greater stability robustness."},
+  {question:"What is the exact significance of the Preamble's phrase 'Sovereign Democratic Republic' being changed to 'Sovereign Socialist Secular Democratic Republic' and when?",options:["Changed in 52nd Amendment 1985 to prevent defection","Changed in 42nd Amendment 1976 during Emergency to add secular and socialist principles; controversial as it was passed during Emergency with many opposition MPs in jail","Changed in 44th Amendment 1978 to reflect Bangladesh independence","Changed in 61st Amendment 1989 to lower voting age"],correct:1,topic:"Constitution",explanation:"The 42nd Constitutional Amendment (1976) during Indira Gandhi's Emergency added 'Socialist' and 'Secular' to the Preamble and 'Integrity' after 'Unity'. Highly controversial as it was enacted with suspended rights, imprisoned opposition, and press censorship. Some argue these were already implicit in the Constitution."},
+  {question:"What does the Efficient Market Hypothesis (EMH) state in its strong form?",options:["Markets always correctly price securities","Prices reflect all publicly available information only","All information - public, private and insider - is already reflected in stock prices making it impossible to consistently outperform market","Markets are efficient only in the long run"],correct:2,topic:"Trading",explanation:"Strong form EMH states all information - past prices, public information, and private/insider information - is fully incorporated into current prices. This would make insider trading useless. Evidence against: insider trading prosecution cases show insiders do make abnormal profits, suggesting strong form doesn't hold."},
+  {question:"What is the exact legal test established in R v McNaughten (1843) for criminal insanity defense?",options:["Defendant was unaware of consequences of their actions","At time of crime, defendant suffered such defect of reason from disease of mind that they didn't know nature of act OR didn't know it was wrong","Court must prove premeditation beyond reasonable doubt","Defendant must prove mental illness diagnosed at time of act"],correct:1,topic:"Law",explanation:"M'Naghten Rules (1843): defense of insanity requires proving that at time of the act, accused was under such defect of reason from disease of the mind that they either didn't know the nature/quality of the act OR didn't know what they were doing was wrong. This test was adopted in Indian law under Section 84 IPC."},
+  {question:"In the context of Machine Learning, what is the 'Vanishing Gradient Problem' and which architecture solved it?",options:["Gradients oscillate preventing convergence; solved by momentum","Only affects CNN not RNN; solved by max pooling","Gradients become too large during backpropagation; solved by dropout","In deep networks, gradients of early layers approach zero during backpropagation making training impossible; solved by LSTM and ResNet with skip connections"],correct:3,topic:"AI",explanation:"Vanishing gradients occur in deep networks when backpropagation multiplies many small gradient values (from sigmoid/tanh), causing gradients to approach zero in early layers - preventing learning. Solutions: LSTM (gating mechanisms preserve gradients in RNNs), ResNet skip/residual connections (direct gradient flow), ReLU activations, batch normalization."},
+  {question:"What is the Heliocentric model's specific prediction tested by Foucault's Pendulum?",options:["Speed of Earth's rotation decreases over time","Earth rotates on its axis - pendulum's plane of swing appears to rotate relative to observer due to Earth's rotation beneath it","Earth's axial tilt causes seasons","Earth revolves around sun in elliptical orbit"],correct:1,topic:"Physics",explanation:"Foucault's Pendulum (Paris, 1851) demonstrated Earth's rotation: a long pendulum's swing plane remains fixed relative to stars while Earth rotates beneath it. The pendulum appears to slowly rotate - completing one full rotation in 24/sin(latitude) hours. At North Pole it rotates once per 24 hours."},
+  {question:"What is the exact purpose of the 'virtual memory' concept in operating systems?",options:["Increases RAM speed by caching frequently used data","Creates illusion of larger RAM by using disk as secondary storage; uses page tables and TLB for address translation enabling process isolation","Allows multiple CPUs to share memory","Encrypts memory contents for security"],correct:1,topic:"Computer Science",explanation:"Virtual memory creates an abstraction where each process has its own large address space independent of physical RAM. Pages of virtual memory are mapped to physical frames via page tables; infrequently used pages are swapped to disk. TLB caches recent translations for speed. Enables memory isolation, larger effective memory, and simplified memory management."},
+  {question:"What is the specific holding of the S.R. Bommai case (1994) regarding Article 356?",options:["Article 356 cannot be used at all","Supreme Court can review imposition of President's Rule; floor test is mandatory before dismissing state government; Article 356 cannot be used for political reasons","States have absolute right to governance and Centre cannot interfere","President's Rule is fully justified whenever Governor recommends"],correct:1,topic:"Law",explanation:"S.R. Bommai v Union of India (1994) 9-judge bench: (1) President's Rule under Article 356 is justiciable and subject to judicial review; (2) Before dismissing a government, the majority must be tested on the floor of the Assembly; (3) Courts can restore dismissed governments; (4) Article 356 cannot be used for political/mala fide reasons. This significantly curbed misuse of Article 356."},
+  {question:"What is the exact significance of P value in hypothesis testing and what does p<0.05 mean?",options:["Probability that the null hypothesis is true","Probability that the alternative hypothesis is true","Confidence level of the statistical test","Probability of obtaining results at least as extreme as observed, assuming null hypothesis is true; p<0.05 means less than 5% chance of observing data if null hypothesis were true"],correct:3,topic:"Mathematics",explanation:"P-value is the probability of observing results at least as extreme as your data if the null hypothesis (H0) were true. p<0.05 means: if H0 is true, there's less than 5% probability of seeing this result by chance. We reject H0 not because we proved it false, but because the data is sufficiently improbable under H0. NOT the probability H0 is true."}
 ];
+
 
 var FFF_QS = [
   // Science & Nature
@@ -286,7 +260,27 @@ function pickQuestion(pool, sessionList, persistList, storageKey) {
 function getOfflineQ(idx) {
   var pool = idx < 5 ? EASY_QS : idx < 10 ? MEDIUM_QS : HARD_QS;
   var key  = idx < 5 ? "easy"  : idx < 10 ? "medium"  : "hard";
-  return pickQuestion(pool, _sessionUsed[key], _persistUsed[key], key);
+  var q = pickQuestion(pool, _sessionUsed[key], _persistUsed[key], key);
+  // Always re-shuffle correct answer position before returning
+  if (q && Array.isArray(q.options) && q.options.length === 4) {
+    var correctAns = q.options[q.correct];
+    var wrongs = q.options.filter(function(_, i) { return i !== q.correct; });
+    // Fisher-Yates shuffle wrongs
+    for (var i = wrongs.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = wrongs[i]; wrongs[i] = wrongs[j]; wrongs[j] = t;
+    }
+    var newPos = Math.floor(Math.random() * 4);
+    var newOpts = [];
+    var wi = 0;
+    for (var k = 0; k < 4; k++) {
+      if (k === newPos) newOpts.push(correctAns);
+      else newOpts.push(wrongs[wi++]);
+    }
+    q.options = newOpts;
+    q.correct = newPos;
+  }
+  return q;
 }
 
 function getOfflineFFF() {
@@ -362,115 +356,257 @@ function getOfflineExpert(question, opts, correct) {
 
 var TOPICS_BY_LEVEL = {
   easy: [
-    // Indian Culture & Society
-    "Famous Indian sweets and their states of origin",
-    "Important Hindu temples and their locations in India",
-    "Indian festivals and their significance",
-    "Indian freedom struggle key dates and figures",
-    "Famous Indian authors and their novels",
-    // Fill in the Blanks
-    "Fill in the blank - famous Bollywood song lyrics",
-    "Fill in the blank - famous Hindi movie dialogues",
-    "Fill in the blank - famous Indian quotes and proverbs",
-    "Fill in the blank - famous English song lyrics",
-    // GK
-    "Indian GK - states capitals and languages",
-    "World Geography capitals rivers and mountains",
-    "Current Indian government policies and schemes 2024",
-    "Basic Mathematics - percentages fractions decimals",
-    "Basic Science - physics chemistry biology",
-    "Human Body organs and functions",
-    "Olympics and sports basic facts",
-    "Constitution of India basics Preamble and rights",
-    "Technology and Computer Science basics",
-    "Space exploration and solar system",
-    "Animal kingdom and biodiversity",
-    "World capitals currencies and flags",
-    "Nobel Prize winners and their fields",
-    "Indian economy GDP and basic finance",
-    "United Nations and world organisations",
-    "Basic Coding - programming languages and concepts",
-    "Cricket records and tournaments",
-    "Bollywood films directors and actors",
-    "Hollywood films and awards",
-    "Famous inventors and their inventions",
-    "Indian temples - Tirupati Varanasi Kedarnath Somnath history"
+    // === GS: HISTORY ===
+    "Ancient India - Ramayana Mahabharata epics characters events moral lessons",
+    "Ancient India - Hindu deities Vishnu Shiva Brahma Durga mythology stories",
+    "Ancient India - Indus Valley Harappa Mohenjo-daro artifacts trade",
+    "Ancient India - Vedic period Upanishads four Vedas Rig Sama Yajur Atharva",
+    "Ancient India - Mauryan empire Ashoka edicts Buddhism spread",
+    "Medieval India - Mughal Empire Akbar Humayun Babur Aurangzeb facts",
+    "Medieval India - Rajput kingdoms battles forts architecture",
+    "Modern India - 1857 revolt causes leaders sepoy mutiny regions",
+    "Modern India - Indian National Congress Gandhi Nehru Subhas Bose freedom",
+    "Modern India - Partition 1947 independence leaders events dates",
+    "World History - French Revolution causes Bastille Napoleon events",
+    "World History - World War I causes allied axis powers key events",
+    "World History - World War II Holocaust UN formation atomic bombs",
+    // === GS: GEOGRAPHY ===
+    "Indian Geography - rivers Ganga Yamuna Brahmaputra Krishna Godavari facts",
+    "Indian Geography - mountains Himalayas Vindhyas Western Ghats Eastern Ghats",
+    "Indian Geography - states capitals languages famous landmarks Taj Mahal",
+    "Indian Geography - India Gate Red Fort Qutub Minar historical monuments",
+    "Indian Geography - national parks wildlife sanctuaries tigers lions facts",
+    "World Geography - continents oceans largest countries capitals flags",
+    "World Geography - rivers Amazon Nile Mississippi Yangtze facts",
+    "Geography - climate zones monsoon rainfall seasons Indian agriculture",
+    // === GS: POLITY & CONSTITUTION ===
+    "Indian Constitution - Preamble Fundamental Rights Articles key provisions",
+    "Indian Polity - Parliament Lok Sabha Rajya Sabha President PM functions",
+    "Indian Polity - Supreme Court High Court judicial system structure",
+    "Governance - Panchayati Raj local self-government village administration",
+    // === GS: ECONOMY ===
+    "Indian Economy - famous entrepreneurs Tata Ambani Infosys Wipro founders",
+    "Indian Economy - famous brands Made in India success stories",
+    "Indian Economy - RBI SEBI NITI Aayog budget schemes basic",
+    "International Organisations - BRICS G20 WTO IMF World Bank SAARC ASEAN",
+    // === GS: ENVIRONMENT & SCIENCE ===
+    "Environment - biodiversity ecosystems national parks flora fauna India",
+    "General Science - human anatomy organs diseases health basic biology",
+    "General Science - plants animals species food chains ecology basic",
+    "General Science - ISRO NASA space missions planets satellites discoveries",
+    "General Science - physics chemistry biology class 10 to 12 concepts",
+    // === ENTERTAINMENT & SPORTS ===
+    "Bollywood - iconic actors Shah Rukh Salman Aamir roles famous films",
+    "Bollywood - iconic actresses Deepika Alia Priyanka Kareena famous roles",
+    "Bollywood - famous songs fill in the blank lyrics dialogues",
+    "Bollywood - recent films 2020-2024 hits directors box office",
+    "Hollywood - Marvel DC superhero films actors storylines",
+    "Hollywood - famous films actors directors Oscars recent",
+    "Cricket - IPL teams records players auction prices season winners",
+    "Cricket - India World Cup records centuries wickets famous matches",
+    "Sports - Olympics India medals Neeraj Chopra PV Sindhu records",
+    "Sports - Football FIFA Messi Ronaldo World Cup ISL India facts",
+    "Sports - Kabaddi Kho-Kho traditional Indian games rules players",
+    // === LANGUAGE & CULTURE ===
+    "Hindi Language - idioms proverbs meanings famous poets Kabir Mirabai",
+    "Indian Festivals - Diwali Holi Eid Christmas Navratri significance dates",
+    "Indian Mythology - Ramayana Sita Ram Hanuman Ravana Lanka stories",
+    "Indian Mythology - Mahabharata Pandavas Kauravas Krishna Arjuna facts",
+    // === CSAT BASIC ===
+    "Aptitude Basic - percentages profit loss simple interest class 10",
+    "Aptitude Basic - time work speed distance ratio proportion class 10",
+    "Logical Reasoning - series patterns odd one out basic analogies",
+    "Current Affairs 2024 - major events awards summits government schemes"
   ],
   medium: [
-    // New topics
-    "Indian sweets - obscure regional sweets and their ingredients",
-    "Non-famous ancient Indian temples - architecture and history",
-    "Fill in the blank - obscure Bollywood songs from 1970s-1990s",
-    "Fill in the blank - famous world literature quotes",
-    "Current Indian government schemes - PM Kisan PMAY Jan Dhan details",
-    "Historical events - obscure world history 1000 AD to 1900 AD",
-    "Stock market trading - technical analysis candlestick patterns",
-    "Stock market - derivatives futures options terminology",
-    "Trading strategies - swing trading scalping arbitrage",
-    "Computer Science - data structures algorithms complexity",
-    "Computer Science - operating systems networking protocols",
-    "Deep Mathematics - calculus differential equations series",
-    "Deep Mathematics - number theory combinatorics probability",
-    "Deep Economics - supply demand elasticity market structures",
-    "Deep Economics - monetary policy RBI functions inflation control",
-    "Deep Biology - cell biology mitosis meiosis genetics",
-    "Deep Biology - human physiology endocrine system neurology",
-    "Accounts - balance sheet income statement ratio analysis",
-    "Accounts - GST TDS ITR financial statements",
-    "Deep Physics - electromagnetism optics waves",
-    "Deep Physics - thermodynamics laws and applications",
-    "AI and Machine Learning - supervised unsupervised algorithms",
-    "AI - neural networks deep learning architectures",
-    "Mechanical Engineering - thermodynamics fluid mechanics",
-    "Electrical Engineering - circuits transformers power systems",
-    "Civil Engineering - structures materials soil mechanics",
-    "Sales techniques - SPIN selling consultative selling",
-    "Business strategy - Porter's Five Forces SWOT BCG matrix",
-    "Startup ecosystem - funding rounds valuation term sheets",
-    "Psychiatry - mental disorders DSM-5 classification treatment"
+    // === GS1: HISTORY DEEP ===
+    "Ancient India - Sangam literature Tamil Chera Chola Pandya kingdoms culture",
+    "Ancient India - Gupta period golden age art science mathematics Aryabhatta",
+    "Ancient India - Buddhism Jainism Theravada Mahayana spread Asia",
+    "Medieval India - Bhakti movement Tukaram Kabir Mirabai Chaitanya saints",
+    "Medieval India - Sufi movement Chishti Suhrawardi orders saints music",
+    "Medieval India - land revenue Todar Mal Mansabdari Jagirdari systems",
+    "Modern India - socio-religious reforms Brahmo Samaj Arya Samaj Vivekananda",
+    "Modern India - Non-Cooperation movement 1920 events participants results",
+    "Modern India - Civil Disobedience Dandi March Salt Satyagraha",
+    "Modern India - Quit India Movement 1942 underground activities leaders",
+    "World History - decolonization Africa Asia nationalist leaders movements",
+    "World History - Cold War proxy wars Korean Vietnam Cuban missile crisis",
+    "World History - formation of UN Bretton Woods IMF World Bank GATT",
+    // === GS1: GEOGRAPHY DEEP ===
+    "Indian Heritage - UNESCO World Heritage Sites India monuments caves temples",
+    "Indian Society - caste system social stratification reform movements",
+    "Indian Society - tribal communities PVTG scheduled areas 5th 6th Schedule",
+    "Indian Society - gender inequality female literacy empowerment data",
+    "Geography - plate tectonics earthquakes volcanoes formation rivers",
+    "Geography - ocean currents tides coral reefs wetlands Ramsar sites",
+    "Geography - Indian agriculture cropping patterns Green Revolution issues",
+    "Geography - natural resources minerals coal petroleum distribution India",
+    // === GS2: POLITY DEEP ===
+    "Polity - Federalism Centre-State relations Article 356 Governor President",
+    "Polity - Emergency provisions Articles 352 356 360 historical uses",
+    "Polity - Constitutional Amendments 42nd 44th 73rd 74th 86th key",
+    "Polity - Fundamental Rights restrictions reasonable nexus Article 19",
+    "Polity - DPSP Article 37-51 state policy conflict with Fundamental Rights",
+    "Polity - CAG UPSC Election Commission Finance Commission functions",
+    "Governance - RTI Act 2005 provisions exemptions CIC enforcement cases",
+    "Governance - Digital India PM Gati Shakti Smart Cities e-governance",
+    "Social Justice - SC ST OBC reservation Mandal Commission Indra Sawhney",
+    "Social Justice - MGNREGA right to food education health entitlements",
+    "Social Justice - women laws POCSO Domestic Violence Act Maternity Benefit",
+    "International Relations - India bilateral China Pakistan US Russia ties",
+    "International Relations - India-China LAC border disputes history",
+    "International Relations - Quad AUKUS Pacific strategy India role",
+    "International Relations - WTO RCEP CPTPP trade agreements India",
+    // === GS3: ECONOMY DEEP ===
+    "Economy - monetary policy RBI repo reverse repo CRR SLR inflation targeting",
+    "Economy - fiscal policy FRBM deficit direct indirect taxes GST structure",
+    "Economy - balance of payments current account capital account forex",
+    "Economy - agriculture MSP procurement APMC reforms food security",
+    "Economy - startup ecosystem unicorns venture capital Indian entrepreneurs",
+    // === GS3: SCIENCE & TECH ===
+    "Science Tech - AI machine learning deep learning applications use cases",
+    "Science Tech - biotechnology genome CRISPR medical applications ethics",
+    "Science Tech - ISRO Chandrayaan Mangalyaan Aditya missions details",
+    "Science Tech - nuclear energy thorium reactor India nuclear policy",
+    "Science Tech - cybersecurity data protection IT Act provisions India",
+    "Science Tech - 5G telecom internet of things smart technology India",
+    "Science Tech - electric vehicles battery technology green hydrogen",
+    // === GS3: ENVIRONMENT DEEP ===
+    "Environment - Paris Agreement COP NDC targets India commitments",
+    "Environment - biodiversity hotspots India CBD Nagoya Protocol",
+    "Environment - NGT pollution laws Environment Protection Act cases",
+    "Environment - disaster management NDMA flood drought earthquake cyclone",
+    "Environment - internal security naxalism AFSPA cyber threats borders",
+    // === GS4: ETHICS ===
+    "Ethics - emotional intelligence empathy attitude values concepts",
+    "Ethics - public service values integrity probity governance India",
+    "Ethics - Gandhian philosophy Sarvodaya Antyodaya trusteeship",
+    "Ethics - Kant Bentham Mill Rawls ethical theories comparison",
+    "Ethics - case study administrative dilemma conflict of interest",
+    // === CSAT MEDIUM ===
+    "CSAT - syllogisms deductive reasoning venn diagrams conclusions",
+    "CSAT - data interpretation bar graph line chart table pie chart",
+    "CSAT - seating arrangement puzzles blood relations complex",
+    "CSAT - reading comprehension inference assumption conclusion",
+    "CSAT - decision making administrative situation ethical choice",
+    // === OPTIONAL: HUMANITIES ===
+    "Sociology - caste class gender institutions social mobility Ambedkar",
+    "Political Science - democracy theories federalism IR realism liberalism",
+    "Philosophy - Indian philosophy Vedanta Nyaya Vaisheshika Samkhya",
+    "Philosophy - Western philosophy Plato Aristotle Kant existentialism",
+    "Public Administration - bureaucracy governance NPM Weber theories",
+    "History Optional - detailed analysis key events rulers policies India",
+    "Geography Optional - geomorphology climatology oceanography India",
+    // === OPTIONAL: SCIENCE & ENGINEERING ===
+    "Mathematics - calculus derivatives integrals differential equations",
+    "Mathematics - linear algebra probability statistics number theory",
+    "Physics - electromagnetism thermodynamics modern physics concepts",
+    "Chemistry - organic reactions inorganic coordination chemistry",
+    "Civil Engineering - structural analysis RCC soil mechanics foundation",
+    "Mechanical Engineering - thermodynamics fluid mechanics machine design",
+    "Electrical Engineering - circuits power systems control electronics",
+    "Computer Science - DSA operating systems DBMS computer networks",
+    "Medical Science - human physiology pathology pharmacology diseases",
+    // === OPTIONAL: LITERATURE ===
+    "Hindi Literature - Premchand Nirala Jaishankar Prasad Kabir poetry prose",
+    "English Literature - Shakespeare Dickens Hardy Tagore Indian English",
+    "Sanskrit Literature - Kalidasa Panini Aryabhatta Chanakya works",
+    "Tamil Literature - Sangam poetry Thirukkural Silappadikaram classics",
+    // === ENTERTAINMENT MEDIUM ===
+    "Bollywood - National Award winners best film actor actress director",
+    "Bollywood - box office records 100cr 500cr Aamir Shah Rukh comparisons",
+    "Bollywood - music composers lyricists singers playback history",
+    "Sports - cricket exact batting bowling records Sachin Kohli statistics",
+    "Sports - Olympics world records track field swimming gymnastics",
+    "Indian Mythology Medium - lesser known stories Puranas Upanishads"
   ],
   hard: [
-    // Extremely hard new topics
-    "Obscure Indian sweets - exact preparation techniques and regional variants",
-    "Ancient Indian temple inscriptions architecture Agama Shastra",
-    "Fill in the blank - rare Sanskrit shlokas and their meanings",
-    "Classified Indian government policies - budget allocations fiscal deficit",
-    "Obscure world historical events - treaties diplomacy 15th-18th century",
-    "Advanced stock trading - Black-Scholes model options Greeks delta gamma",
-    "High frequency trading algorithms - market microstructure",
-    "Advanced DSA - graph algorithms dynamic programming NP-hard problems",
-    "Advanced Computer Networks - BGP OSPF TCP/IP internals",
-    "Advanced Mathematics - topology abstract algebra group theory",
-    "Advanced Mathematics - real analysis measure theory complex analysis",
-    "Advanced Econometrics - regression time series ARIMA cointegration",
-    "Advanced Macroeconomics - IS-LM Mundell-Fleming DSGE models",
-    "Advanced Molecular Biology - CRISPR epigenetics proteomics",
-    "Advanced Genetics - Hardy-Weinberg population genetics genomics",
-    "Advanced Accounting - IFRS standards consolidation deferred tax",
-    "Advanced Accounts - forensic accounting transfer pricing",
-    "Quantum Physics - Schrodinger equation wave functions entanglement",
-    "Quantum Physics - quantum field theory Feynman diagrams",
-    "Advanced ML - transformer architecture attention mechanism BERT GPT",
-    "Advanced AI - reinforcement learning policy gradient methods",
-    "Mechanical Engineering - vibration analysis finite element method",
-    "Electrical Engineering - power electronics control systems Bode plot",
-    "Civil Engineering - geotechnical earthquake engineering seismic design",
-    "Psychiatry - psychoanalytic theory Freud Jung Adler comparison",
-    "Cognitive Psychology - memory models working memory Baddeley",
-    "Advanced Business Strategy - game theory in business oligopoly",
-    "Startup - unit economics CAC LTV cohort analysis burn rate",
-    "Advanced Trading - quantitative finance Sharpe ratio VaR portfolio theory",
-    "UPSC IAS level - Indian polity governance constitutional amendments",
-    "IIT JEE Advanced level - physics chemistry mathematics problems",
-    "NIMCET level - advanced discrete mathematics logical reasoning",
-    "Banking exams IBPS level - financial awareness monetary policy",
-    "SSC CGL advanced - general awareness current affairs reasoning",
-    "Advanced Quantum Mechanics - Dirac equation spin operators angular momentum",
-    "Neuroscience - synaptic plasticity LTP action potential ion channels",
-    "Geopolitics - obscure international conflicts treaties alliances",
-    "Advanced Indian Philosophy - Nyaya Vaisheshika Samkhya Mimamsa systems",
-    "Rare Nobel Prize science - mechanism of awarded discoveries",
-    "Thermodynamics - Carnot cycle entropy Gibbs free energy electrochemistry"
+    // === UPSC MAINS DEEP: HISTORY ===
+    "History - Kautilya Arthashastra seven elements state philosophy comparison",
+    "History - Ashoka's Dhamma edicts inscriptions pillar rock interpretation",
+    "History - Arab invasion Sind 712 AD Muhammad bin Qasim significance",
+    "History - Permanent Settlement 1793 effects Ryotwari Mahalwari comparison",
+    "History - INC moderate extremist split Surat 1907 causes aftermath",
+    "History - Cabinet Mission Plan 1946 provisions Mountbatten acceptance",
+    "History - Treaty of Versailles war guilt reparations consequences WWII",
+    "History - Bretton Woods 1944 IMF IBRD GATT formation implications",
+    // === UPSC MAINS: POLITY DEEP ===
+    "Polity - Kesavananda Bharati 1973 13 judges Basic Structure components",
+    "Polity - Article 370 abrogation Jammu Kashmir reorganization validity",
+    "Polity - Collegium system NJAC struck down judicial appointments debate",
+    "Polity - 10th Schedule anti-defection Speaker decision judicial review",
+    "Polity - President Art 74 binding Cabinet advice discretion exceptions",
+    "Polity - Inter-State Council Finance Commission devolution principles",
+    "IR - Panchsheel non-alignment NAM India strategic autonomy evolution",
+    "IR - India nuclear doctrine No First Use deterrence credibility",
+    "IR - SCO BRICS expansion multipolar world China Russia implications",
+    // === UPSC MAINS: ECONOMY DEEP ===
+    "Economy - twin balance sheet NPA IBC 2016 resolution NCLT NCLAT",
+    "Economy - informal economy unorganized sector labor code reforms India",
+    "Economy - Land Acquisition LARR 2013 SEZ industrial corridor issues",
+    "Economy - External debt sovereign rating capital account convertibility",
+    "Economy - shadow banking NBFC IL&FS crisis regulation gaps India",
+    // === UPSC MAINS: SCIENCE & TECH ===
+    "Science Tech - quantum computing qubits superposition entanglement India",
+    "Science Tech - mRNA vaccines mechanism immunity COVID MRNA platform",
+    "Science Tech - semiconductor chip fabrication geopolitics India policy",
+    "Science Tech - deep sea mining International Seabed Authority ISA",
+    "Science Tech - carbon capture storage hydrogen economy global net zero",
+    // === UPSC MAINS: ENVIRONMENT ===
+    "Environment - carbon markets voluntary compliance credits pricing ETS",
+    "Environment - just transition fossil fuels developing nations equity",
+    "Environment - one health approach zoonotic AMR pandemic preparedness",
+    "Environment - ecological sensitive zones ESZ Gadgil Kasturirangan report",
+    // === GS4: ETHICS HARD ===
+    "Ethics - trolley problem consequentialism deontology virtue comparison",
+    "Ethics - whistleblowing Edward Snowden Satyendra Dubey public interest",
+    "Ethics - Arthashastra statecraft kautilyan realism comparison modern",
+    "Ethics - Rawls veil of ignorance justice as fairness distributive",
+    // === OPTIONAL: ADVANCED MATHEMATICS ===
+    "Mathematics - abstract algebra group ring field Galois theory proofs",
+    "Mathematics - real analysis epsilon delta Riemann integral convergence",
+    "Mathematics - topology metric spaces compactness connectedness proofs",
+    "Mathematics - complex analysis Cauchy theorem residue conformal mapping",
+    "Mathematics - number theory RSA Fermat last theorem Riemann hypothesis",
+    // === OPTIONAL: ADVANCED SCIENCE ===
+    "Physics - quantum mechanics Schrodinger Heisenberg uncertainty principle",
+    "Physics - general relativity spacetime curvature black holes Hawking",
+    "Physics - nuclear physics fission fusion reactor design criticality",
+    "Chemistry - organic named reactions mechanism retrosynthesis NMR",
+    "Chemistry - coordination chemistry crystal field theory spectroscopy",
+    "Medical Science - immunology antibodies autoimmune diseases monoclonal",
+    "Medical Science - pharmacology drug receptor mechanism clinical trials",
+    "Medical Science - pathology cancer metastasis molecular markers therapy",
+    // === OPTIONAL: ADVANCED ENGINEERING ===
+    "Civil Engineering - geotechnical seismic analysis foundation liquefaction",
+    "Mechanical Engineering - vibration FEM computational fluid dynamics CFD",
+    "Electrical Engineering - power electronics control Bode Nyquist PID",
+    "Electrical Engineering - VLSI digital signal processing FFT algorithms",
+    "Computer Science - NP-completeness distributed consensus Paxos Raft",
+    "Computer Science - advanced DSA segment tree suffix array DP optimization",
+    // === OPTIONAL: LITERATURE ADVANCED ===
+    "Hindi Literature - Chhayavad Pragativad Prayogvad Nayi Kavita movements",
+    "English Literature - postcolonialism subaltern studies Spivak Bhabha",
+    "Sanskrit Literature - Meghaduta Abhijnana Shakuntalam Arthashastra detail",
+    "Tamil Literature - Thiruvalluvar Thirukkural philosophical interpretations",
+    "Sociology - structural functionalism conflict theory Parsons Merton",
+    "Political Science - neorealism constructivism Waltz Wendt IR theories",
+    "Philosophy - phenomenology Husserl Heidegger existentialism Sartre",
+    "Public Administration - NPM new public governance Weber Mintzberg",
+    // === ADVANCED CULTURE & MYTHOLOGY ===
+    "Indian Mythology - Puranas Bhagavata Vishnu Skanda obscure stories",
+    "Indian Mythology - Ramayana versions Valmiki Kamban Tulsidas differences",
+    "Indian Mythology - Mahabharata philosophical discourse Gita Bhishma Parva",
+    "Indian Heritage - Agama Shastra temple architecture iconography details",
+    "Indian Heritage - classical dance forms Bharatanatyam Kathak Odissi grammar",
+    // === COMPETITIVE EXAM SPECIAL ===
+    "UPSC - ethical dilemma case study administrative discretion decision",
+    "UPSC - international organisations WTO IMF G20 reform India position",
+    "IIT JEE Advanced - integrated physics chemistry mathematics problems",
+    "GATE Advanced - engineering analysis design optimization problems",
+    "CAT Level - DILR logical reasoning data sufficiency critical analysis",
+    "NIMCET - discrete mathematics formal languages automata computability"
   ]
 };
 
@@ -512,135 +648,406 @@ function buildFFFPrompt(cat) {
     '{"question":"Arrange these from smallest to largest (or in logical order): ...","options":["item1","item2","item3","item4"],"correctOrder":[2,0,3,1],"explanation":"Step-by-step: item2=X, item1=Y, item4=Z, item3=W so order is item2 < item1 < item4 < item3"}';
 }
 
-// Global question seen registry - persists across ALL sessions
-var SEEN_REGISTRY_KEY = "kbg_seen_all_v2";
-var _seenAll = (function() {
-  try { return JSON.parse(localStorage.getItem(SEEN_REGISTRY_KEY) || "[]"); } catch(e) { return []; }
-})();
-// Strong deduplication: session set + localStorage set
-var _seenThisSession = new Set();
+// ============================================================
+// QUESTION DEDUPLICATION SYSTEM
+// Single source of truth: localStorage key "kbg_q_v3"
+// Stores full question text (not truncated) for exact matching
+// Also keeps a hash for fast lookup
+// ============================================================
+var DEDUP_KEY = "kbg_q_v4";
+
+// Always read fresh from localStorage on every check
+function _getStore() {
+  try {
+    var raw = localStorage.getItem(DEDUP_KEY);
+    if (raw) {
+      var parsed = JSON.parse(raw);
+      if (parsed && Array.isArray(parsed.texts)) return parsed;
+    }
+  } catch(e) {}
+  return { texts: [], hashes: {} };
+}
+
+function _saveStore(store) {
+  try {
+    localStorage.setItem(DEDUP_KEY, JSON.stringify(store));
+  } catch(e) {
+    // Storage full - keep only last 100
+    try {
+      var trimmed = { texts: store.texts.slice(-100), hashes: {} };
+      trimmed.texts.forEach(function(t) { trimmed.hashes[_hashQ(t)] = 1; });
+      localStorage.setItem(DEDUP_KEY, JSON.stringify(trimmed));
+    } catch(e2) {}
+  }
+}
+
+// Polynomial hash - fast O(n) unique ID per question text
+function _hashQ(text) {
+  var h = 5381;
+  for (var i = 0; i < text.length; i++) {
+    h = ((h << 5) + h + text.charCodeAt(i)) & 0x7fffffff;
+  }
+  return String(h);
+}
 
 function markSeen(qText) {
-  if (!qText) return;
-  var norm = qText.trim().toLowerCase().slice(0, 80);
-  _seenThisSession.add(norm);
-  try {
-    var stored = JSON.parse(localStorage.getItem("kbg_seen_qs") || "[]");
-    stored.push(norm);
-    // Keep last 500 questions
-    if (stored.length > 500) stored = stored.slice(-500);
-    localStorage.setItem("kbg_seen_qs", JSON.stringify(stored));
-  } catch(e) {}
+  if (!qText || typeof qText !== "string") return;
+  var norm = qText.trim().toLowerCase();
+  var hash = _hashQ(norm);
+  var store = _getStore();
+  if (store.hashes[hash]) return; // already there
+  store.hashes[hash] = 1;
+  store.texts.push(norm);
+  if (store.texts.length > 800) {
+    var removed = store.texts.splice(0, 200);
+    removed.forEach(function(t) { delete store.hashes[_hashQ(t)]; });
+  }
+  _saveStore(store);
 }
 
 function wasSeen(qText) {
-  if (!qText) return false;
-  var norm = qText.trim().toLowerCase().slice(0, 80);
-  if (_seenThisSession.has(norm)) return true;
+  if (!qText || typeof qText !== "string") return false;
   try {
-    var stored = JSON.parse(localStorage.getItem("kbg_seen_qs") || "[]");
-    return stored.indexOf(norm) >= 0;
+    var norm = qText.trim().toLowerCase();
+    var hash = _hashQ(norm);
+    var store = _getStore(); // always fresh from localStorage
+    if (store.hashes[hash]) return true;
+    // Also check first 55 chars to catch near-duplicates
+    var prefix = norm.slice(0, 55);
+    return store.texts.some(function(t) { return t.slice(0, 55) === prefix; });
   } catch(e) { return false; }
 }
 
+function getRecentSeen(n) {
+  try {
+    var store = _getStore();
+    return store.texts.slice(-n).map(function(t) { return t.slice(0, 80); });
+  } catch(e) { return []; }
+}
+
+// Session dedup - catches repeats within same browser tab
+var _sessionSeen = new Set();
+function markSeenSession(q) { if (q) _sessionSeen.add(q.trim().toLowerCase().slice(0, 55)); }
+function wasSeenSession(q) { return q ? _sessionSeen.has(q.trim().toLowerCase().slice(0, 55)) : false; }
+
+
+
 async function fetchQ(idx) {
-  var level = idx < 5 ? "easy" : idx < 10 ? "medium" : "hard";
-  var topics = TOPICS_BY_LEVEL[level];
-  var topic = topics[Math.floor(Math.random() * topics.length)];
+
+  // === QUESTION SLOT → CATEGORY MAPPING ===
+  // Each question slot is permanently mapped to a category from the instructions
+  // This ensures every game covers ALL required subjects in order of difficulty
+  var SLOT_CATEGORIES = [
+    // Q1 - Easy mix: Mythology/Culture OR Sports/Entertainment (most engaging first)
+    ["Ancient India - Ramayana Mahabharata epics characters events moral lessons",
+     "Ancient India - Hindu deities Vishnu Shiva Brahma Durga mythology stories",
+     "Bollywood - iconic actors Shah Rukh Salman Aamir roles famous films",
+     "Cricket - IPL teams records players auction prices season winners",
+     "Sports - Olympics India medals Neeraj Chopra PV Sindhu records",
+     "Indian Mythology - Ramayana Sita Ram Hanuman Ravana Lanka stories"],
+    // Q2 - History Ancient/Medieval
+    ["Ancient India - Indus Valley Harappa Mohenjo-daro artifacts trade",
+     "Ancient India - Vedic period Upanishads four Vedas Rig Sama Yajur Atharva",
+     "Ancient India - Mauryan empire Ashoka edicts Buddhism spread",
+     "Medieval India - Mughal Empire Akbar Humayun Babur Aurangzeb facts",
+     "Medieval India - Rajput kingdoms battles forts architecture",
+     "Indian Mythology - Mahabharata Pandavas Kauravas Krishna Arjuna facts"],
+    // Q3 - Geography + GS General Science basics
+    ["Indian Geography - rivers Ganga Yamuna Brahmaputra Krishna Godavari facts",
+     "Indian Geography - states capitals languages famous landmarks Taj Mahal",
+     "World Geography - continents oceans largest countries capitals flags",
+     "General Science - ISRO NASA space missions planets satellites discoveries",
+     "General Science - human anatomy organs diseases health basic biology",
+     "Indian Festivals - Diwali Holi Eid Christmas Navratri significance dates"],
+    // Q4 - CSAT Aptitude / Logical Reasoning
+    ["Aptitude Basic - percentages profit loss simple interest class 10",
+     "Aptitude Basic - time work speed distance ratio proportion class 10",
+     "Logical Reasoning - series patterns odd one out basic analogies",
+     "Logical Reasoning - coding decoding blood relations directions",
+     "Aptitude Basic - percentages profit loss simple interest class 10",
+     "CSAT - syllogisms deductive reasoning venn diagrams conclusions"],
+    // Q5 - Modern History + Freedom Struggle + Culture
+    ["Modern India - 1857 revolt causes leaders sepoy mutiny regions",
+     "Modern India - Indian National Congress Gandhi Nehru Subhas Bose freedom",
+     "Modern India - Non-Cooperation movement 1920 events participants results",
+     "Modern India - Civil Disobedience Dandi March Salt Satyagraha",
+     "Modern India - Partition 1947 independence leaders events dates",
+     "Hindi Language - idioms proverbs meanings famous poets Kabir Mirabai"],
+    // Q6 - Polity & Constitution (GS2)
+    ["Indian Constitution - Preamble Fundamental Rights Articles key provisions",
+     "Indian Polity - Parliament Lok Sabha Rajya Sabha President PM functions",
+     "Governance - Panchayati Raj local self-government village administration",
+     "Polity - Federalism Centre-State relations Article 356 Governor President",
+     "Polity - Constitutional Amendments 42nd 44th 73rd 74th 86th key",
+     "Social Justice - SC ST OBC reservation Mandal Commission Indra Sawhney"],
+    // Q7 - Economy + Business + Entrepreneurs (GS3)
+    ["Indian Economy - famous entrepreneurs Tata Ambani Infosys Wipro founders",
+     "Indian Economy - RBI SEBI NITI Aayog budget schemes basic",
+     "International Organisations - BRICS G20 WTO IMF World Bank SAARC ASEAN",
+     "Economy - monetary policy RBI repo reverse repo CRR SLR inflation targeting",
+     "Economy - fiscal policy FRBM deficit direct indirect taxes GST structure",
+     "Economy - startup ecosystem unicorns venture capital Indian entrepreneurs"],
+    // Q8 - Environment + Ecology + Disaster Management (GS3)
+    ["Environment - biodiversity ecosystems national parks flora fauna India",
+     "Environment - Paris Agreement COP NDC targets India commitments",
+     "Environment - biodiversity hotspots India CBD Nagoya Protocol",
+     "Environment - disaster management NDMA flood drought earthquake cyclone",
+     "Environment - NGT pollution laws Environment Protection Act cases",
+     "General Science - plants animals species food chains ecology basic"],
+    // Q9 - Science & Technology + Internal Security (GS3)
+    ["Science Tech - AI machine learning deep learning applications use cases",
+     "Science Tech - ISRO Chandrayaan Mangalyaan Aditya missions details",
+     "Science Tech - biotechnology genome CRISPR medical applications ethics",
+     "Science Tech - cybersecurity data protection IT Act provisions India",
+     "Internal Security - naxalism left wing extremism AFSPA insurgency",
+     "Science Tech - electric vehicles battery technology green hydrogen"],
+    // Q10 - International Relations + World History (GS2)
+    ["International Relations - India bilateral China Pakistan US Russia ties",
+     "International Relations - India-China LAC border disputes history",
+     "International Relations - Quad AUKUS Pacific strategy India role",
+     "World History - Cold War proxy wars Korean Vietnam Cuban missile crisis",
+     "World History - decolonization Africa Asia nationalist leaders movements",
+     "IR - SCO BRICS expansion multipolar world China Russia implications"],
+    // Q11 - Ethics + Integrity + Advanced Polity (GS4)
+    ["Ethics - emotional intelligence empathy attitude values concepts",
+     "Ethics - public service values integrity probity governance India",
+     "Ethics - Gandhian philosophy Sarvodaya Antyodaya trusteeship",
+     "Ethics - Kant Bentham Mill Rawls ethical theories comparison",
+     "Polity - Kesavananda Bharati 1973 13 judges Basic Structure components",
+     "Polity - Emergency provisions Articles 352 356 360 historical uses"],
+    // Q12 - Humanities Optional: History/Polity/Sociology deep
+    ["History - Kautilya Arthashastra seven elements state philosophy comparison",
+     "History - Permanent Settlement 1793 effects Ryotwari Mahalwari comparison",
+     "Sociology - caste class gender institutions social mobility Ambedkar",
+     "Political Science - democracy theories federalism IR realism liberalism",
+     "Philosophy - Indian philosophy Vedanta Nyaya Vaisheshika Samkhya",
+     "History - INC moderate extremist split Surat 1907 causes aftermath"],
+    // Q13 - Science/Tech Optional: Mathematics/Physics/Chemistry/Engineering
+    ["Mathematics - calculus derivatives integrals differential equations",
+     "Physics - electromagnetism thermodynamics modern physics concepts",
+     "Chemistry - organic reactions inorganic coordination chemistry",
+     "Civil Engineering - structural analysis RCC soil mechanics foundation",
+     "Mechanical Engineering - thermodynamics fluid mechanics machine design",
+     "Electrical Engineering - circuits power systems control electronics"],
+    // Q14 - Literature + Medical Science Optional
+    ["Hindi Literature - Premchand Nirala Jaishankar Prasad Kabir poetry prose",
+     "English Literature - Shakespeare Dickens Hardy Tagore Indian English",
+     "Sanskrit Literature - Kalidasa Panini Aryabhatta Chanakya works",
+     "Tamil Literature - Sangam poetry Thirukkural Silappadikaram classics",
+     "Medical Science - human physiology pathology pharmacology diseases",
+     "Computer Science - DSA operating systems DBMS computer networks"],
+    // Q15 - Advanced UPSC Mains level deep questions
+    ["Polity - Collegium system NJAC struck down judicial appointments debate",
+     "Economy - twin balance sheet NPA IBC 2016 resolution NCLT NCLAT",
+     "History - Cabinet Mission Plan 1946 provisions Mountbatten acceptance",
+     "IR - India nuclear doctrine No First Use deterrence credibility",
+     "Environment - one health approach zoonotic AMR pandemic preparedness",
+     "Ethics - trolley problem consequentialism deontology virtue comparison"],
+    // Q16 - IMPOSSIBLE: Expert/Research/IIT-JEE-Advanced/UPSC-Interview level
+    ["Mathematics - abstract algebra group ring field Galois theory proofs",
+     "Physics - quantum mechanics Schrodinger Heisenberg uncertainty principle",
+     "Chemistry - organic named reactions mechanism retrosynthesis NMR",
+     "Computer Science - NP-completeness distributed consensus Paxos Raft",
+     "Medical Science - immunology antibodies autoimmune monoclonal antibodies",
+     "UPSC - ethical dilemma case study administrative discretion decision"]
+  ];
+
+  // Pick topic for this question slot
+  var slotTopics = SLOT_CATEGORIES[idx] || SLOT_CATEGORIES[15];
+  var topic = slotTopics[Math.floor(Math.random() * slotTopics.length)];
+  var topics = TOPICS_BY_LEVEL[idx < 5 ? "easy" : idx < 10 ? "medium" : "hard"];
   var seed = Math.floor(Math.random() * 9999999);
 
-  var diff = idx === 0
-    ? "MODERATE - not too easy, requires thinking. Avoid obvious questions like 'capital of India'. Ask something that requires actual knowledge like a specific date, person, formula or fact that an average person might not immediately know."
-    : idx < 3
-    ? "MEDIUM - requires specific knowledge. Ask about obscure facts, specific years, technical terms, or details that most people wouldn't know without studying. Options must all seem plausible."
-    : idx < 5
-    ? "HARD - requires deep subject knowledge. Ask tricky questions with confusing options. User should have to think carefully. Avoid any question that can be guessed from the question itself."
-    : idx < 7
-    ? "VERY HARD - graduate level. Specific technical facts, obscure details, exact figures, precise terminology. All 4 options must be extremely plausible. A random guess should rarely succeed."
-    : idx < 9
-    ? "EXPERT HARD - post-graduate specialist knowledge required. Ask about specific mechanisms, exact values, obscure historical details, technical specifications. Wrong options should be convincing decoys."
-    : idx < 11
-    ? "NEAR IMPOSSIBLE - only 5% of people would know this. Ask about highly specific obscure facts that even subject experts might second-guess. Options must be indistinguishable without precise knowledge."
-    : idx < 13
-    ? "BRUTALLY HARD - PhD research level. The most obscure specific fact in this topic. Wrong options must be so close to correct that even professors would struggle. No guessing should work."
-    : idx < 15
-    ? "DIABOLICALLY HARD - the rarest deepest fact in this topic. Something from advanced research papers, specific clauses, exact mechanisms, rare historical events. Options differ only in tiny specific details."
-    : "IMPOSSIBLE - only world-class experts in this exact topic would know. Ask about the most obscure specific technical detail imaginable. All 4 options must look equally correct to anyone without precise memorized knowledge.";
 
-  // Special instructions per question type
-  var special = "";
-  if (topic.indexOf("Fill in the blank") >= 0) {
-    special = " Format: Show the text with ____ for the blank. Make the blank a crucial word that changes meaning.";
-  } else if (topic.indexOf("sweets") >= 0 || topic.indexOf("temple") >= 0) {
-    special = " Ask about specific obscure details - exact ingredients, geographical origin, specific ritual, exact location.";
-  } else if (topic.indexOf("Trading") >= 0 || topic.indexOf("stock") >= 0 || topic.indexOf("Stock") >= 0 || topic.indexOf("trading") >= 0) {
-    special = " Use precise financial terminology. Ask about exact formulas, specific regulations, technical indicators.";
-  } else if (topic.indexOf("Coding") >= 0 || topic.indexOf("Computer") >= 0 || topic.indexOf("DSA") >= 0 || topic.indexOf("Algorithm") >= 0) {
-    special = " Ask about specific syntax, algorithm complexity, exact output of code snippet, specific data structure property.";
-  } else if (topic.indexOf("Mathematics") >= 0 || topic.indexOf("calculus") >= 0 || topic.indexOf("algebra") >= 0) {
-    special = " Ask calculation-based questions with specific numerical answers. Options should differ by small amounts.";
-  } else if (topic.indexOf("Physics") >= 0 || topic.indexOf("Quantum") >= 0) {
-    special = " Ask about exact formulas, specific constants, precise experimental results, named effects and their discoverers.";
-  } else if (topic.indexOf("UPSC") >= 0 || topic.indexOf("IIT") >= 0 || topic.indexOf("NIMCET") >= 0 || topic.indexOf("SSC") >= 0 || topic.indexOf("Banking") >= 0) {
-    special = " Generate a question at the exact difficulty level of this exam. Use exam-style phrasing.";
+  // BANNED questions - these are too easy - API must NEVER generate these types
+  var BANNED = "FORBIDDEN (class 5 school level - NEVER generate these): who wrote Romeo and Juliet, basic unit of life, NaCl formula, sunshine vitamin, Darwin evolution theory, photosynthesis definition, decathlon 10 events, first woman PM India, RAM full form, largest ocean, national animals, boiling point water, speed of light, DNA full form, how many bones human body, H2O, largest planet Jupiter, what does WHO stand for. Generate UPSC/graduate level or above only.";
+
+  // Per-question specific depth instructions with concrete examples
+  var diff;
+  if (idx === 0) {
+    diff = "DIFFICULTY: UPSC Prelims GS Paper 1 standard. Factual questions that require reading and general awareness. Not school level - a working professional should have to think. Example: 'Which Article of the Indian Constitution provides for equal pay for equal work?' or 'What was the Rowlatt Act 1919?'";
+  } else if (idx === 1) {
+    diff = "DIFFICULTY: UPSC Prelims standard / SSC CGL / Bank PO. Requires specific factual knowledge of history geography polity economy. Example: 'Which movement was launched after the Jallianwala Bagh massacre?' or 'What is the Van't Hoff factor in chemistry?'";
+  } else if (idx === 2) {
+    diff = "DIFFICULTY: UPSC CSAT Paper 2 level - logical reasoning analytical ability. Or GS Paper with application-level question. Example: 'In a group of 6, A sits opposite B, C is between D and E...' type reasoning. Or 'What is Laffer Curve?' requiring conceptual understanding.";
+  } else if (idx === 3) {
+    diff = "DIFFICULTY: UPSC Prelims tricky questions - the kind that confuse even prepared candidates. Involves exceptions, specific years, exact provisions, close-call options. Example: 'Which Schedule of the Indian Constitution deals with anti-defection law?' All 4 options must be real Schedules/Articles.";
+  } else if (idx === 4) {
+    diff = "DIFFICULTY: UPSC Mains GS Paper 1 level. Deep factual knowledge with nuanced options. Example: 'Distinguish between the Permanent Settlement, Ryotwari and Mahalwari systems - under which the Government directly dealt with peasants?' Options must all be specific, real, and confusing.";
+  } else if (idx === 5) {
+    diff = "DIFFICULTY: UPSC Mains GS Paper 2 - Polity and IR deep level. Requires knowledge of specific judgements, treaty provisions, constitutional articles, landmark cases. Example: 'In Minerva Mills case, which Articles of the Constitution were struck down?' All options must be real Articles.";
+  } else if (idx === 6) {
+    diff = "DIFFICULTY: UPSC Mains GS Paper 3 - Economy, Environment, Science & Tech deep. Specific provisions, exact mechanisms, policy details. Example: 'What is the Insolvency Resolution Process (IRP) under IBC 2016 and what is the time limit?' Options must all be real provisions.";
+  } else if (idx === 7) {
+    diff = "DIFFICULTY: UPSC Mains GS Paper 4 - Ethics case study level. Or Optional subject entrance level. Requires deep ethical reasoning or technical subject knowledge. Example: 'A civil servant discovers his senior is involved in corruption that affects thousands. He has documented evidence. Under which law can he file a complaint and what protection is available?'";
+  } else if (idx === 8) {
+    diff = "DIFFICULTY: UPSC Optional subject Paper 1 level. Specialist knowledge required. The question should be answerable only by someone who has specifically studied this subject at graduation or post-graduation level. All 4 options must be real technical terms or values from the same narrow domain.";
+  } else if (idx === 9) {
+    diff = "DIFFICULTY: UPSC Optional Paper 2 / IIT JEE Advanced level. Deeply technical question that requires synthesis of multiple concepts. Even subject graduates may second-guess. All 4 options must be indistinguishable to anyone without precise memorized knowledge of this exact detail.";
+  } else if (idx === 10) {
+    diff = "DIFFICULTY: IIT JEE Advanced / GATE / CAT level. The most difficult standard question in this topic. Requires precise technical knowledge, not guessable. Wrong options must be real concepts that are commonly confused with the correct answer. A random guess has effectively zero chance.";
+  } else if (idx === 11) {
+    diff = "DIFFICULTY: IIT JEE Advanced integration question OR UPSC Interview level. Requires connecting multiple concepts across the topic. So specific that even a professor in the field may pause before answering. All options must look equally correct to someone without exact knowledge.";
+  } else if (idx === 12) {
+    diff = "DIFFICULTY: PhD entrance / Research level question. The most obscure specific detail in this entire subject area. Something found only in advanced textbooks or research papers. 4 options that are all technically real but only one is precisely correct in this exact context.";
+  } else if (idx === 13) {
+    diff = "DIFFICULTY: Near impossible - only a genuine domain expert with specific research background would know. Ask about exact values, specific sub-clauses, precise mechanisms, rare historical details. All 4 options must be from the exact same technical domain and all plausible.";
+  } else if (idx === 14) {
+    diff = "DIFFICULTY: World expert level. The rarest, most specific fact in this topic. Something even textbooks rarely cover precisely. Options differ only in minute specific details - a single word, a number, a year, a mechanism step. 99% of experts would have to guess.";
+  } else {
+    diff = "DIFFICULTY: IMPOSSIBLE. The single hardest question that can be asked on this topic. Something from a specific research paper, obscure legal provision, exact experimental value, or highly technical mechanism. All 4 options are real terms from the same narrow sub-field and completely indistinguishable without precise specialist memory.";
   }
 
-  var confuse = idx >= 3
-    ? " CRITICAL: All 4 options must be specific, plausible, and confusing. Wrong options must be same category as correct - nearby numbers, similar names, related concepts. NEVER include obviously wrong options. User should genuinely not know."
-    : "";
+  // Smart special instructions based on topic category - applied per question
+  var special = "";
+  var topicLow = topic.toLowerCase();
+  if (topicLow.indexOf("ramayana") >= 0 || topicLow.indexOf("mahabharata") >= 0 || topicLow.indexOf("mythology") >= 0 || topicLow.indexOf("deity") >= 0 || topicLow.indexOf("deities") >= 0) {
+    special = " Ask specific character relationships, events, alternative versions, or philosophical meanings from the epics. NOT obvious main storyline facts.";
+  } else if (topicLow.indexOf("bollywood") >= 0 || topicLow.indexOf("film") >= 0 || topicLow.indexOf("cinema") >= 0 || topicLow.indexOf("hollywood") >= 0) {
+    special = " Ask about specific film facts - release year, co-stars, awards, director, dialogue source, song composer - that a real film fan would know but casual viewer would not.";
+  } else if (topicLow.indexOf("cricket") >= 0 || topicLow.indexOf("ipl") >= 0 || topicLow.indexOf("sports") >= 0 || topicLow.indexOf("olympics") >= 0 || topicLow.indexOf("football") >= 0 || topicLow.indexOf("kabaddi") >= 0 || topicLow.indexOf("badminton") >= 0) {
+    special = " Ask about exact records, statistics, years, player achievements - numbers must be precise. All 4 options must be realistic numerical values or player names.";
+  } else if (topicLow.indexOf("fill in") >= 0 || topicLow.indexOf("lyrics") >= 0 || topicLow.indexOf("dialogue") >= 0 || topicLow.indexOf("idiom") >= 0 || topicLow.indexOf("proverb") >= 0) {
+    special = " Format: Show text with ____ for missing word. Include the source name. The missing word must be non-obvious. Options must all be plausible-sounding words.";
+  } else if (topicLow.indexOf("aptitude") >= 0 || topicLow.indexOf("csat") >= 0 || topicLow.indexOf("logical") >= 0 || topicLow.indexOf("reasoning") >= 0 || topicLow.indexOf("numeracy") >= 0) {
+    special = " Give a specific calculation or logic puzzle with actual numbers/statements. Require actual working-out. Options must be 4 close numerical values or specific logical conclusions.";
+  } else if (topicLow.indexOf("data interpretation") >= 0) {
+    special = " Embed a small data table or % values in the question text. Ask a specific calculated question about it. Options must be 4 close numerical answers.";
+  } else if (topicLow.indexOf("ethics") >= 0 || topicLow.indexOf("integrity") >= 0) {
+    special = " Ask about a specific ethical philosopher, concept, or administrative dilemma scenario. Options must represent genuinely different ethical positions.";
+  } else if (topicLow.indexOf("polity") >= 0 || topicLow.indexOf("constitution") >= 0 || topicLow.indexOf("governance") >= 0 || topicLow.indexOf("amendment") >= 0) {
+    special = " Ask about specific Article numbers, Schedule names, Amendment numbers, or landmark case names. All 4 options must be real Articles/cases/Schedules.";
+  } else if (topicLow.indexOf("history") >= 0 || topicLow.indexOf("medieval") >= 0 || topicLow.indexOf("ancient") >= 0 || topicLow.indexOf("mughal") >= 0 || topicLow.indexOf("freedom") >= 0) {
+    special = " Ask about specific years, exact names, obscure but important historical details. Options must be real historical figures, dates, or events from the same period.";
+  } else if (topicLow.indexOf("geography") >= 0 || topicLow.indexOf("monument") >= 0 || topicLow.indexOf("river") >= 0) {
+    special = " Ask about specific locations, historical facts, or geographical features that require precise knowledge. Options must be real places or values that are commonly confused.";
+  } else if (topicLow.indexOf("economy") >= 0 || topicLow.indexOf("entrepreneur") >= 0 || topicLow.indexOf("brand") >= 0 || topicLow.indexOf("business") >= 0) {
+    special = " Ask about specific data, policy names, founding year, exact provisions. Options must be real companies, policies, or economic figures.";
+  } else if (topicLow.indexOf("literature") >= 0 || topicLow.indexOf("hindi") >= 0 || topicLow.indexOf("sanskrit") >= 0 || topicLow.indexOf("tamil") >= 0) {
+    special = " Ask about specific works, authors, movements, or characters. All 4 options must be real authors or works from the same literary tradition.";
+  } else if (topicLow.indexOf("mathematics") >= 0 || topicLow.indexOf("calculus") >= 0 || topicLow.indexOf("algebra") >= 0) {
+    special = " Ask a calculation or theorem question with a specific numerical answer. Options must be 4 close numbers that differ slightly.";
+  } else if (topicLow.indexOf("physics") >= 0 || topicLow.indexOf("quantum") >= 0 || topicLow.indexOf("chemistry") >= 0) {
+    special = " Ask about a specific equation, constant value, named reaction, or experimental result. Options must be real scientific values or names.";
+  } else if (topicLow.indexOf("engineering") >= 0 || topicLow.indexOf("civil") >= 0 || topicLow.indexOf("mechanical") >= 0 || topicLow.indexOf("electrical") >= 0 || topicLow.indexOf("dsa") >= 0 || topicLow.indexOf("computer science") >= 0) {
+    special = " Ask about specific formulas, algorithms, time complexities, or technical mechanisms. All options must be real technical terms or values.";
+  } else if (topicLow.indexOf("environment") >= 0 || topicLow.indexOf("ecology") >= 0 || topicLow.indexOf("climate") >= 0 || topicLow.indexOf("biodiversity") >= 0) {
+    special = " Ask about specific treaty names, Article provisions, species names, or policy details. Options must be real laws, species, or agreements.";
+  } else if (topicLow.indexOf("upsc") >= 0 || topicLow.indexOf("iit") >= 0 || topicLow.indexOf("gate") >= 0 || topicLow.indexOf("cat") >= 0 || topicLow.indexOf("nimcet") >= 0) {
+    special = " Generate a question in the exact style of this exam's previous papers. Match the difficulty and phrasing format precisely.";
+  }
 
-  // IMPORTANT: Ask API to ALWAYS put correct answer at index 0
-  // We will shuffle client-side to guarantee true randomness
-  var prompt = "KBC quiz question. Seed:" + seed + " Topic:" + topic + " Difficulty:" + diff + " Q" + (idx+1) + "/16." + special + confuse + "\nIMPORTANT: Put the correct answer at index 0 in options array (correct:0). We will shuffle later.\nReturn ONLY valid JSON:\n{\"question\":\"specific factual question?\",\"options\":[\"CORRECT_ANSWER\",\"wrong1\",\"wrong2\",\"wrong3\"],\"correct\":0,\"topic\":\"" + topic + "\",\"explanation\":\"2 sentences: why correct answer is right and why others are wrong.\"}";
+  var confuse = " MANDATORY: All 4 options must be specific, real, plausible. NEVER obviously wrong distractors. Wrong options must be from the same domain and genuinely confusing. User must need precise knowledge to distinguish.";
+
+  // Randomly pick a question STYLE to force variety - different angle every call
+  var styles = [
+    "Ask about a specific NUMBER or YEAR (exact figure that requires knowledge)",
+    "Ask about WHO did/invented/discovered something specific and obscure",
+    "Ask about WHAT a specific technical term, theorem or concept means",
+    "Ask about WHY a specific event happened or what caused a particular outcome",
+    "Ask about HOW a specific mechanism, process or algorithm works",
+    "Ask WHICH specific case/law/act/treaty established or defined something",
+    "Give a scenario or description and ask the user to IDENTIFY what it is",
+    "Ask about the DIFFERENCE between two very similar concepts in the topic",
+    "Ask about WHEN a specific important event in this topic occurred",
+    "Ask about a specific FORMULA, EQUATION, or CALCULATION in this topic"
+  ];
+  var style = styles[Math.floor(Math.random() * styles.length)];
+
+
+
 
   try {
-    var data = await callAPI(prompt, 350);
-
-    // Retry if seen before
+    var data = null;
     var attempts = 0;
-    while (data && data.question && wasSeen(data.question) && attempts < 2) {
-      var ns = Math.floor(Math.random() * 9999999);
-      data = await callAPI(prompt.replace("Seed:" + seed, "Seed:" + ns), 350);
-      attempts++;
-    }
+    var maxAttempts = 5;
 
-    if (data && data.question && Array.isArray(data.options) && data.options.length === 4) {
-      markSeen(data.question);
+    while (attempts < maxAttempts) {
+      try {
+        // Each retry gets a completely fresh seed and possibly a new topic
+        var trySeed = Math.floor(Math.random() * 99999999);
+        var tryTopic = attempts < 2
+          ? topic
+          : slotTopics[Math.floor(Math.random() * slotTopics.length)];
 
-      // Normalize correct index - handle if API returned something other than 0
-      var correctIdx = (typeof data.correct === "number" && data.correct >= 0 && data.correct < 4) ? data.correct : 0;
-      var correctAnswer = data.options[correctIdx];
+        // Rebuild recent-seen list fresh each attempt
+        var recentNow = getRecentSeen(10);
+        var avoidNow = recentNow.length > 0
+          ? "\nAVOID REPEATING these exact questions already asked:\n" +
+            recentNow.map(function(q, i) { return (i+1) + ". " + q; }).join("\n")
+          : "";
 
-      // GUARANTEED CLIENT-SIDE SHUFFLE using crypto-quality randomness
-      // Use a hand-picked target position that cycles through 0,1,2,3 evenly
-      // This is independent of API and guaranteed to be uniform
-      var targetPos = Math.floor(Math.random() * 4); // true uniform 0-3
+        // Build a completely fresh prompt each attempt with random style
+        var tryStyle = styles[Math.floor(Math.random() * styles.length)];
+        var tryPrompt = trySeed + " " + BANNED +
+          "\n\nGenerate ONE KBC quiz question." +
+          "\nTopic: " + tryTopic +
+          "\nQuestion Style: " + tryStyle +
+          "\n" + diff + special + confuse + avoidNow +
+          "\n\nPut correct answer at index 0. Return ONLY valid JSON no markdown:\n" +
+          "{\"question\":\"?\",\"options\":[\"CORRECT\",\"wrong1\",\"wrong2\",\"wrong3\"]," +
+          "\"correct\":0,\"topic\":\"" + tryTopic + "\"," +
+          "\"explanation\":\"Why correct. Why each wrong option is wrong.\"}";
 
-      // Build new options array: place correct answer at targetPos
-      // Fill remaining positions with wrong answers in shuffled order
-      var wrongs = [];
-      for (var wi = 0; wi < 4; wi++) {
-        if (wi !== correctIdx) wrongs.push(data.options[wi]);
-      }
-      // Shuffle wrongs using Fisher-Yates
-      for (var fi = wrongs.length - 1; fi > 0; fi--) {
-        var fj = Math.floor(Math.random() * (fi + 1));
-        var ft = wrongs[fi]; wrongs[fi] = wrongs[fj]; wrongs[fj] = ft;
-      }
+        data = await callAPI(tryPrompt, 700);
 
-      var finalOpts = [];
-      var wi2 = 0;
-      for (var oi = 0; oi < 4; oi++) {
-        if (oi === targetPos) {
-          finalOpts.push(correctAnswer);
-        } else {
-          finalOpts.push(wrongs[wi2++]);
+        // Validate structure
+        if (!data || !data.question || typeof data.question !== "string" || data.question.length < 10) {
+          attempts++; data = null; continue;
         }
-      }
+        if (!Array.isArray(data.options) || data.options.length !== 4) {
+          attempts++; data = null; continue;
+        }
+        var hasEmptyOpt = data.options.some(function(o) {
+          return !o || typeof o !== "string" || o.trim().length < 1;
+        });
+        if (hasEmptyOpt) { attempts++; data = null; continue; }
 
-      data.options = finalOpts;
-      data.correct = targetPos;
+        // Dedup check - fresh from localStorage every time
+        if (wasSeenSession(data.question) || wasSeen(data.question)) {
+          attempts++; data = null; continue;
+        }
+
+        // Good unique question
+        break;
+
+      } catch(innerErr) {
+        attempts++;
+        await new Promise(function(r) { setTimeout(r, 300); });
+      }
     }
+
+    if (!data || !data.question) {
+      return getOfflineQ(idx);
+    }
+
+    // Record in both stores immediately
+    markSeen(data.question);
+    markSeenSession(data.question);
+
+    // Normalize correct index
+    var correctIdx = (typeof data.correct === "number" && data.correct >= 0 && data.correct < 4) ? data.correct : 0;
+    var correctAnswer = data.options[correctIdx];
+
+    // GUARANTEED CLIENT-SIDE SHUFFLE
+    var targetPos = Math.floor(Math.random() * 4);
+    var wrongs = [];
+    for (var wi = 0; wi < 4; wi++) {
+      if (wi !== correctIdx) wrongs.push(data.options[wi]);
+    }
+    for (var fi = wrongs.length - 1; fi > 0; fi--) {
+      var fj = Math.floor(Math.random() * (fi + 1));
+      var ft = wrongs[fi]; wrongs[fi] = wrongs[fj]; wrongs[fj] = ft;
+    }
+    var finalOpts = [];
+    var wi2 = 0;
+    for (var oi = 0; oi < 4; oi++) {
+      if (oi === targetPos) { finalOpts.push(correctAnswer); }
+      else { finalOpts.push(wrongs[wi2++]); }
+    }
+    data.options = finalOpts;
+    data.correct = targetPos;
+
     return data;
   } catch(e) {
     return getOfflineQ(idx);
@@ -648,15 +1055,22 @@ async function fetchQ(idx) {
 }
 
 async function translateQ(q) {
-  var prompt = "You are a Hindi translator. Translate the following KBC quiz question and its 4 options into Hindi (Devanagari script). Keep proper nouns, numbers, scientific terms, and abbreviations in English.\n\nQuestion: " + q.question + "\nOption A: " + q.options[0] + "\nOption B: " + q.options[1] + "\nOption C: " + q.options[2] + "\nOption D: " + q.options[3] + "\nExplanation: " + (q.explanation || "") + "\n\nReturn ONLY this exact JSON format with no extra text:\n{\"question\":\"<Hindi question here>?\",\"options\":[\"<Hindi A>\",\"<Hindi B>\",\"<Hindi C>\",\"<Hindi D>\"],\"explanation\":\"<Hindi explanation>\"}";
+  if (!q || !q.question || !Array.isArray(q.options)) return null;
+  var prompt = "Translate this KBC quiz question to Hindi (Devanagari). Keep numbers, proper nouns, technical terms, abbreviations in English. Return ONLY valid JSON, no markdown.\nQ: " + q.question + "\nA: " + q.options[0] + "\nB: " + q.options[1] + "\nC: " + q.options[2] + "\nD: " + q.options[3] + "\nJSON: {\"question\":\"Hindi question?\",\"options\":[\"Hindi A\",\"Hindi B\",\"Hindi C\",\"Hindi D\"],\"explanation\":\"Hindi explanation\"}";
   try {
-    var result = await callAPI(prompt, 500);
-    // Validate the result has proper structure
-    if (!result.question || !Array.isArray(result.options) || result.options.length !== 4) {
-      throw new Error("Invalid translation structure");
-    }
+    var result = await callAPI(prompt, 600);
+    if (!result || !result.question || !Array.isArray(result.options) || result.options.length !== 4) throw new Error("bad");
+    // Validate each option is non-empty
+    var allValid = result.options.every(function(o) { return o && typeof o === "string" && o.trim().length > 0; });
+    if (!allValid) throw new Error("empty option");
     return result;
   } catch(e) {
+    // Try once more with different phrasing
+    try {
+      var p2 = "Hindi translate. Question: " + q.question + ". Options: " + q.options.join(" | ") + ". Return JSON: {\"question\":\"...\",\"options\":[\"...\",\"...\",\"...\",\"...\"],\"explanation\":\"...\"}";
+      var r2 = await callAPI(p2, 600);
+      if (r2 && r2.question && Array.isArray(r2.options) && r2.options.length === 4) return r2;
+    } catch(e2) {}
     return getOfflineHindi(q);
   }
 }
@@ -731,6 +1145,7 @@ var CSS = [
 ".hbtn.exit:hover,.hbtn.exit:active{background:rgba(100,10,30,0.8);border-color:var(--red)}",
 ".hbtn.tr{border-color:rgba(0,207,255,0.4);color:rgba(150,230,255,0.9)}",
 ".hbtn.tr.rdy{border-color:rgba(0,207,255,0.7);box-shadow:0 0 8px rgba(0,207,255,0.3)}",
+".hbtn.tr.loading{border-color:rgba(255,215,0,0.6);color:rgba(255,215,0,0.8);animation:logoPulse 0.8s ease-in-out infinite alternate}",
 ".hbtn.tr.on{background:rgba(0,50,100,0.8);border-color:var(--cyan);color:var(--cyan)}",
 ".rules-screen{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:clamp(12px,3vw,24px) clamp(10px,3vw,20px);overflow-y:auto}",
 ".rules-card{background:linear-gradient(145deg,rgba(15,0,35,0.97),rgba(30,0,70,0.92));border:2px solid rgba(123,47,255,0.5);border-radius:16px;padding:clamp(16px,4vw,28px) clamp(14px,4vw,24px);max-width:600px;width:100%;box-shadow:0 0 60px rgba(139,0,255,0.3),0 0 120px rgba(139,0,255,0.1);animation:fadeUp 0.5s ease,borderGlow 4s ease-in-out infinite}",
@@ -985,6 +1400,7 @@ export default function KaunBanegaGenius() {
   var [isHindi, setIsHindi] = useState(false);
   var [hindiData, setHindiData] = useState(null);
   var [hindiReady, setHindiReady] = useState(false);
+  var [hindiLoading, setHindiLoading] = useState(false);
 
   // UI
   var [showQuit, setShowQuit] = useState(false);
@@ -1062,22 +1478,29 @@ export default function KaunBanegaGenius() {
 
   // Pre-translate when question loads
   useEffect(function() {
-    if (!q || !q.question || !q.options) return;
     setHindiData(null);
     setHindiReady(false);
     setIsHindi(false);
-    // Pass the raw English question (q, not dq) to translateQ
+    setHindiLoading(false);
+  }, [currentQ]);
+
+  // Translate on demand when user clicks button - triggered by hindiLoading flag
+  useEffect(function() {
+    if (!hindiLoading || !q || !q.question || !q.options) return;
+    var cancelled = false;
     translateQ(q).then(function(hd) {
+      if (cancelled) return;
       if (hd && hd.question && Array.isArray(hd.options) && hd.options.length === 4) {
         setHindiData(hd);
         setHindiReady(true);
-      } else {
-        setHindiReady(false);
+        setIsHindi(true);
       }
+      setHindiLoading(false);
     }).catch(function() {
-      setHindiReady(false);
+      if (!cancelled) setHindiLoading(false);
     });
-  }, [currentQ]);
+    return function() { cancelled = true; };
+  }, [hindiLoading, currentQ]);
 
   // Cleanup on unmount
   useEffect(function() {
@@ -1317,7 +1740,16 @@ export default function KaunBanegaGenius() {
   };
 
   var handleTranslate = function() {
-    if (hindiReady) setIsHindi(function(p) { return !p; });
+    if (isHindi) {
+      // Already in Hindi - switch back to English
+      setIsHindi(false);
+    } else if (hindiReady && hindiData) {
+      // Translation already done - just switch on
+      setIsHindi(true);
+    } else if (!hindiLoading) {
+      // First time click - trigger translation
+      setHindiLoading(true);
+    }
   };
 
   var optCls = function(idx) {
@@ -1334,8 +1766,8 @@ export default function KaunBanegaGenius() {
   var timerUrgent = timeLeft !== null && timeLeft <= 10;
   var timerWarn = timeLeft !== null && timerTotal && timeLeft <= Math.floor(timerTotal / 2) && !timerUrgent;
   var timerCls = "ll-timer" + (timerUrgent ? " urgent" : timerWarn ? " warn" : "");
-  var trCls = "hbtn tr" + (isHindi ? " on" : hindiReady ? " rdy" : "");
-  var trLbl = isHindi ? "English" : "Hindi";
+  var trCls = "hbtn tr" + (isHindi ? " on" : hindiLoading ? " loading" : hindiReady ? " rdy" : "");
+  var trLbl = isHindi ? "English" : hindiLoading ? "Translating..." : "Translate";
 
   function PrizePanel() {
     return React.createElement("div", { className: "prize-panel" },
@@ -1411,7 +1843,7 @@ export default function KaunBanegaGenius() {
           React.createElement("div", { className: "logo" }, APP_NAME),
           React.createElement("div", { className: "logo-sub" }, "Who Will Become a Genius?"),
           React.createElement("div", { className: "hdr-btns" },
-            screen === "playing" && !revealed && React.createElement("button", { className: trCls, onClick: handleTranslate, disabled: !hindiReady }, trLbl),
+            screen === "playing" && React.createElement("button", { className: trCls, onClick: handleTranslate, disabled: hindiLoading }, trLbl),
             screen === "playing" && React.createElement("button", { className: "hbtn exit", onClick: function() { stopTimer(); setShowQuit(true); } }, "Exit")
           )
         ),
